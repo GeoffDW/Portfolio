@@ -4,11 +4,15 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-family: 'khand', serif;
+}
+
 /***** HEADER ****/
 
 h1 {
     text-align: start;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     font-family: 'Tanker', sans-serif;
     font-weight: 900
@@ -35,6 +39,7 @@ li {
         flex-direction: row;
         text-decoration: none;
         color: black;
+        font-size: 1.2em;
     }
 }
 
@@ -45,9 +50,26 @@ li {
     padding: 20px;
     font-family: 'khand', serif;
 
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
     h2 {
         border-bottom: 3px solid rgb(203, 203, 251);
         width: 145px;
+    }
+
+    img {
+        width: 250px;
+        border-radius: 3%;
+        display: flex;
+        margin: 30px auto;
+    }
+
+    p {
+        margin: 20px 0 0 30px;
+        font-size: 1.2em;
     }
 }
 
@@ -64,145 +86,53 @@ li {
 }
 
 h2 {
+    display: inline;
+    font-size: 2em;
     border-bottom: 3px solid white;
-    width: 83px;
 }
 
+/***** CARD ****/
 
-.card {
-    width: 300px;
-    padding: 20px;
-    background: #fff;
-    border: 6px solid #000;
-    box-shadow: 12px 12px 0 #000;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 17px 17px 0 #000;
-}
-
-.card__title {
-    font-size: 32px;
-    font-weight: 900;
-    color: #000;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-.card__title::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
-    height: 3px;
-    background-color: rgb(203, 203, 251);
-    transform: translateX(-100%);
-    transition: transform 0.3s;
-}
-
-.card:hover .card__title::after {
-    transform: translateX(0);
-}
-
-.card__content {
-    font-size: 16px;
-    line-height: 1.4;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.card__form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.card__form input {
-    padding: 10px;
-    border: 3px solid #000;
-    font-size: 16px;
-    font-family: inherit;
-    transition: transform 0.3s;
-    width: calc(100% - 26px);
-    /* Adjust for padding and border */
-}
-
-.card__form input:focus {
-    outline: none;
-    transform: scale(1.05);
-    background-color: #000;
-    color: #ffffff;
-}
-
-.card__button {
-    border: 3px solid #000;
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    font-size: 18px;
-    left: 20%;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
-    width: 50%;
-    height: 100%;
-}
-
-.card__button::before {
-    content: "Sure?";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 105%;
-    background-color: #5ad641;
-    color: #000;
-    display: flex;
-    align-items: center;
+.sectionCard {
+	flex: 1;
+	margin: 8px;
+	display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-}
+    gap: 70px;
+    margin-top: 40px;
 
-.card__button:hover::before {
-    transform: translateY(0);
-}
+    article {
+        width: 300px;
+        height: 350px;
+        padding: 20px;
+        background: #fff;
+        border: 6px solid #000;
+        box-shadow: 12px 12px 0 #000;
+        transition: transform 0.3s, box-shadow 0.3s;
 
-.card__button:active {
-    transform: scale(0.95);
-}
-
-@keyframes glitch {
-    0% {
-        transform: translate(2px, 2px);
+        &:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 17px 17px 0 #000;
+        }
     }
 
-    25% {
-        transform: translate(-2px, -2px);
+    h2 {
+        font-size: 1.5em;
+        margin-top: 0;
+        width: 100%;
     }
 
-    50% {
-        transform: translate(-2px, 2px);
+    article img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        max-height: 200px;
+        min-height: 200px;
     }
 
-    75% {
-        transform: translate(2px, -2px);
+    article p {
+        margin-top: 4px;
+        margin-bottom: 4px;
     }
-
-    100% {
-        transform: translate(2px, 2px);
-    }
-}
-
-.glitch {
-    animation: glitch 0.3s infinite;
 }

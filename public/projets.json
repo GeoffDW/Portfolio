@@ -26,7 +26,7 @@
     {
         "id": 4,
         "nom": "Sophie Buel",
-        "image": "images/sophiebuel.webp",
+        "image": "images/sophiebluel.webp",
         "technologies": "HTML/CSS/JAVASCRIPT",
         "lien": "https://geoffdw.github.io/sophiebuel/"
     },
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "nom": "724",
-        "image": "img/724.webp",
+        "image": "images/724.webp",
         "technologies": "HTML/CSS/JAVASCRIPT",
         "lien": "https://geoffdw.github.io/724/"
     },
@@ -42,7 +42,7 @@
     {
         "id": 6,
         "nom": "Nina Carducci",
-        "image": "images/ohmyfood.webp",
+        "image": "images/ninacarducci.webp",
         "technologies": "HTML/CSS/JAVASCRIPT",
         "lien": "https://geoffdw.github.io/OhMyFood/"
     }, 
@@ -50,7 +50,7 @@
     {
         "id": 7,
         "nom": "Argent Bank",
-        "image": "images/galerie.webp",
+        "image": "images/argentbank.webp",
         "technologies": "HTML/CSS/JAVASCRIPT",
         "lien": "https://geoffdw.github.io/argentbank/"
     }
