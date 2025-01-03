@@ -27,7 +27,7 @@
         "id": 4,
         "nom": "Sophie Buel",
         "image": "images/sophiebluel.webp",
-        "technologies": "HTML|CSS|JAVASCRIPT",
+        "technologies": "HTML | CSS | JAVASCRIPT",
         "lien": "https://geoffdw.github.io/sophiebuel/"
     },
 
@@ -35,7 +35,7 @@
         "id": 5,
         "nom": "724",
         "image": "images/724.webp",
-        "technologies": "HTML | CSS | JAVASCRIPT",
+        "technologies": "HTML | CSS | JAVASCRIPT",
         "lien": "https://geoffdw.github.io/724/"
     },
 

@@ -10,7 +10,7 @@
 
     const projetCard = document.createElement("article");
 
-    const nomCard = document.createElement("h2");
+    const nomCard = document.createElement("h3");
     nomCard.innerText = card.nom;
     
     const imageCard = document.createElement("img");
@@ -28,7 +28,7 @@
     projetCard.appendChild(boutonCard);
     }
 
-    
+
     const hamburgerButton = document.querySelector(".nav-toggler")
     const navigation = document.querySelector("nav")
 
