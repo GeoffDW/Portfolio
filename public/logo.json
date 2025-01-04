@@ -1,0 +1,34 @@
+[
+    {
+        "src": "./images/html5.webp",
+        "alt": "logo HTML5"
+    },
+    {
+        "src": "./images/css3.webp",
+        "alt": "logo CSS3"
+    },
+    {
+        "src": "./images/sass.webp",
+        "alt": "logo SASS"
+    },
+    {
+        "src": "./images/javascript.webp",
+        "alt": "logo JAVASCRIPT"
+    },
+    {
+        "src": "./images/react.webp",
+        "alt": "logo REACT"
+    },
+    {
+        "src": "./images/figma.webp",
+        "alt": "logo FIGMA"
+    },
+    {
+        "src": "./images/github.webp",
+        "alt": "logo GITHUB"
+    },
+    {
+        "src": "./images/seo.webp",
+        "alt": "logo SEO"
+    }
+]
