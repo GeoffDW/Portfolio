@@ -20,6 +20,9 @@
     technologiesCard.innerText = card.technologies;
 
     const boutonCard = document.createElement("button");
+    boutonCard.classList.toggle("button")
+    boutonCard.innerText = ("voir")
+
 
     sectionCard.appendChild(projetCard);
     projetCard.appendChild(nomCard);
@@ -38,3 +41,5 @@
         hamburgerButton.classList.toggle("active")
         navigation.classList.toggle("active")
     }
+
+    

@@ -31,7 +31,7 @@ h2 {
     display: block;
     width: 100%;
     height: 2px;
-    background: rgb(38, 55, 112);
+    background: rgb(142, 142, 142);
     transition: transform 0.3s ease-out, opacity 0.1s ease-out;
     ;
 }
@@ -58,8 +58,8 @@ h2 {
 
 nav {
     position: fixed;
-    width: 40%;
-    min-height: 95%;
+    width: 50%;
+    min-height: 100%;
     right: 0;
     display: flex;
     justify-content: flex-start;
@@ -70,6 +70,10 @@ nav {
     border-bottom: 1px solid #cfcfcf;
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+
+    ul {
+        padding: 20px;
+    }
 }
 
 nav.active {
@@ -79,7 +83,7 @@ nav.active {
 nav a {
     font-family: "satoshi", sans-serif;
     color: #f1f1f1;
-    font-size: 25px;
+    font-size: 20px;
     display: block;
     margin: 33px 0 0 -90px;
     text-decoration: none;
@@ -99,6 +103,8 @@ nav li {
     font-family: 'Teko', sans-serif;
     width: 100%;
     background-image: url(./images/design.png);
+    background-size: cover;
+    padding-top: 50px;
 
     h1 {
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 92%);
@@ -107,6 +113,7 @@ nav li {
         font-size: 3.5em;
         font-weight: 200;
         text-align: center;
+        margin: 0;
     }
 
     h2 {
@@ -114,6 +121,8 @@ nav li {
         font-weight: 400;
         text-align: center;
         margin-bottom: 70px;
+        padding: 0 20px;
+        font-size: 1.6em;
     }
 
 
@@ -122,7 +131,7 @@ nav li {
 /***** A PROPOS ****/
 
 #a-propos {
-    background-color: #e4f3fd;
+    background: #cbe5ff;
     padding: 20px;
     font-family: 'satoshi', serif;
     margin-top: 50px;
@@ -165,7 +174,6 @@ nav li {
     img {
         width: 100%;
         height: 230px;
-        border-radius: 2%;
         margin-top: 10px;
         object-fit: cover;
     }
@@ -191,20 +199,20 @@ nav li {
     justify-content: center;
     gap: 70px;
     margin-top: 40px;
+    position: relative;
 
 
     article {
-        width: 400px;
+        width: 80%;
         height: 420px;
-        background: linear-gradient(to right, #dddddd, #f8f9fa);
         border-radius: 6%;
         box-shadow: 6px 6px 0 #d2d2d2;
         transition: transform 0.3s, box-shadow 0.3s;
-        border: none;
+        border: 2px solid rgb(218, 218, 218);
 
         &:hover {
             transform: translate(-5px, -5px);
-            box-shadow: 17px 17px 0 #b4b3b3;
+            box-shadow: 17px 17px 0 #d2d2d2;
         }
 
         h3 {
@@ -224,23 +232,91 @@ nav li {
     }
 }
 
+.sectionCard button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 13px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    display: block; /* Chaque bouton reste dans son propre flux */
+    margin: -5px auto 0; /* Centre horizontalement avec du marge */
+    z-index: 1;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
 
-    /***** FOOTER ****/
+.sectionCard button:hover {
+    border: 1px solid white;
+}
 
-    footer {
-        background-color: rgb(38, 55, 112);
-        height: 100px;
+.sectionCard button:active {
+    box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
 
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
+.sectionCard button:hover {
+    transform: scale(1.1);
+
+}
+
+
+/***** SKILLS ****/
+
+#skills {
+    background: url(./images/fond-ecran-bleu-titre-fond-ecran-bleu_483537-4469.webp);
+    background-size: cover;
+
+    h3 {
+        font-family: 'roboto', sans-serif;
+        font-weight: 600;
+        font-size: 1em;
+        text-align: center;
+        color: rgb(215, 215, 255);
     }
+}
+
+.sectionSkills {
+    background-color: #cbe5ff;
+    width: 60%;
+    height: 100px;
+    border-radius: 5%;
+    margin: auto;
+    margin-bottom: 50px;
+
+    i {
+        font-size: 2.5em;
+    }
+}
+
+#skills h2 {
+    font-family: "teko";
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: rgb(215, 215, 255);
+    padding-top: 20px;
+}
+
+
+/***** FOOTER ****/
+
+footer {
+    background-color: rgb(38, 55, 112);
+    height: 100px;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
 
 
-    /* header {
+/* header {
     background-color: rgb(38, 55, 112);
     height: 100px;
 
