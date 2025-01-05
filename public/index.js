@@ -1,8 +1,7 @@
-    const response = await fetch("projets.json");
-    const projets = await response.json();
+const response = await fetch("projets.json");
+const projets = await response.json();
 
-
-    for (let i = 0; i < projets.length; i++) {
+for (let i = 0; i < projets.length; i++) {
 
     const card = projets[i];
 
@@ -12,7 +11,7 @@
 
     const nomCard = document.createElement("h3");
     nomCard.innerText = card.nom;
-    
+
     const imageCard = document.createElement("img");
     imageCard.src = card.image;
 
@@ -29,17 +28,16 @@
     projetCard.appendChild(imageCard);
     projetCard.appendChild(technologiesCard);
     projetCard.appendChild(boutonCard);
-    }
+}
 
 
-    const hamburgerButton = document.querySelector(".nav-toggler")
-    const navigation = document.querySelector("nav")
+const hamburgerButton = document.querySelector(".nav-toggler")
+const navigation = document.querySelector("nav")
 
-    hamburgerButton.addEventListener("click", toggleNav)
+hamburgerButton.addEventListener("click", toggleNav)
 
-    function toggleNav() {
-        hamburgerButton.classList.toggle("active")
-        navigation.classList.toggle("active")
-    }
+function toggleNav() {
+    hamburgerButton.classList.toggle("active")
+    navigation.classList.toggle("active")
+}
 
-    
