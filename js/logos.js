@@ -1,5 +1,5 @@
 
-const response = await fetch("../data/logos.json");
+const response = await fetch("data/logos.json");
 const skills = await response.json();
 
 // Sélectionne l'élément parent où ajouter la section (exemple : dans le `body`)
