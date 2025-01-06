@@ -323,6 +323,25 @@ header nav li {
     padding-top: 20px;
 }
 
+/***** CONTACT ****/
+
+#contact {
+    background: url(./images/fond-d-ecran-contact.jpg);
+    background-size: cover;
+    height: 600px;
+    padding-top: 15px;
+}
+
+h2 {
+    font-family: "teko";
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: rgb(38, 55, 112);
+}
+
 
 /***** FOOTER ****/
 
