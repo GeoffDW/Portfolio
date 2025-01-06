@@ -1,4 +1,4 @@
-const response = await fetch("projets.json");
+const response = await fetch("../data/projets.json");
 const projets = await response.json();
 
 for (let i = 0; i < projets.length; i++) {

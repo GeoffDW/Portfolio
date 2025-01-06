@@ -204,7 +204,7 @@ nav li {
 
 
     article {
-        width: 80%;
+        width: 350px;
         height: 420px;
         border-radius: 6%;
         box-shadow: 6px 6px 0 #d2d2d2;
@@ -282,13 +282,13 @@ nav li {
 
 .sectionFront {
     background-color: #cbe5ff;
-    width: 70%;
+    width: 300px;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;
-    gap: 45px;
+    gap: 35px;
     flex-wrap: wrap;
     padding: 16px;
     justify-content: center;
