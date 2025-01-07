@@ -30,6 +30,7 @@ for (let i = 0; i < projets.length; i++) {
     projetCard.appendChild(boutonCard);
 }
 
+/// MENU DEROULANT ///
 
 const hamburgerButton = document.querySelector(".nav-toggler")
 const navigation = document.querySelector("nav")
@@ -40,4 +41,51 @@ function toggleNav() {
     hamburgerButton.classList.toggle("active")
     navigation.classList.toggle("active")
 }
+
+
+/// CONTACT ///
+
+
+const contactSection = document.getElementById('contact');
+
+const divContact = document.createElement('div');
+
+const contactForm = document.createElement('form');
+
+const labelNom = document.createElement('label');
+labelNom.textContent = 'Nom';
+
+const inputNom = document.createElement('input');
+inputNom.type = 'text';
+inputNom.name = 'nom';
+
+const labelEmail = document.createElement('label');
+labelEmail.textContent = 'Email';
+
+const inputEmail = document.createElement('input');
+inputEmail.type = 'email';
+inputEmail.name = 'email';
+
+const labelMessage = document.createElement('label');
+labelMessage.textContent = 'Message';
+
+const textareaMessage = document.createElement('textarea');
+textareaMessage.name = 'message';
+
+const boutonEnvoyer = document.createElement('button');
+boutonEnvoyer.type = 'submit';
+boutonEnvoyer.textContent = 'Envoyer';
+
+contactSection.appendChild(contactForm);
+contactSection.appendChild(divContact);
+divContact.appendChild(contactForm);
+contactForm.appendChild(labelNom);
+contactForm.appendChild(inputNom);
+contactForm.appendChild(labelEmail);
+contactForm.appendChild(inputEmail);
+contactForm.appendChild(labelMessage);
+contactForm.appendChild(textareaMessage);
+contactForm.appendChild(boutonEnvoyer);
+
+
 
