@@ -52,19 +52,26 @@ const divContact = document.createElement('div');
 
 const contactForm = document.createElement('form');
 
+const labelPrenom = document.createElement('label');
+labelPrenom.textContent = 'Prénom';
+
+const inputPrenom = document.createElement('input');
+inputPrenom.type = 'text';
+inputPrenom.name = 'Prénom';
+
 const labelNom = document.createElement('label');
 labelNom.textContent = 'Nom';
 
 const inputNom = document.createElement('input');
 inputNom.type = 'text';
-inputNom.name = 'nom';
+inputNom.name = 'Nom';
 
 const labelEmail = document.createElement('label');
 labelEmail.textContent = 'Email';
 
 const inputEmail = document.createElement('input');
-inputEmail.type = 'email';
-inputEmail.name = 'email';
+inputEmail.type = 'Email';
+inputEmail.name = 'Email';
 
 const labelMessage = document.createElement('label');
 labelMessage.textContent = 'Message';
@@ -79,6 +86,8 @@ boutonEnvoyer.textContent = 'Envoyer';
 contactSection.appendChild(contactForm);
 contactSection.appendChild(divContact);
 divContact.appendChild(contactForm);
+contactForm.appendChild(labelPrenom);
+contactForm.appendChild(inputPrenom);
 contactForm.appendChild(labelNom);
 contactForm.appendChild(inputNom);
 contactForm.appendChild(labelEmail);
