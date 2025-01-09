@@ -48,6 +48,8 @@ function toggleNav() {
 
 const contactSection = document.getElementById('contact');
 
+const divTwoContact = document.createElement('div');
+
 const divContact = document.createElement('div');
 
 const contactForm = document.createElement('form');
