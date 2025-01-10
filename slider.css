@@ -26,7 +26,7 @@ ul {
 }
 
 .card-wrapper {
-    margin: 0 60px 35px;
+    margin: 0 40px 35px;
     padding: 20px 10px;
     overflow: hidden;
 }
@@ -70,7 +70,7 @@ ul {
 }
 
 .card-list .card-link .card-title {
-    font-size: 1.19rem;
+    font-size: 1em;
     color: #000;
     font-weight: 400;
     font-family: "roboto", sans-serif;
@@ -102,4 +102,19 @@ ul {
 
 .card-wrapper .swiper-pagination-bullet-active {
     opacity: 1;
+}
+
+.card-wrapper .swiper-slider-button {
+    color: #5372F0;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
 }
