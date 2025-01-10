@@ -1,34 +1,34 @@
-const response = await fetch("data/projets.json");
-const projets = await response.json();
+// const response = await fetch("data/projets.json");
+// const projets = await response.json();
 
-for (let i = 0; i < projets.length; i++) {
+// for (let i = 0; i < projets.length; i++) {
 
-    const card = projets[i];
+//     const card = projets[i];
 
-    const sectionCard = document.querySelector(".sectionCard");
+//     const sectionCard = document.querySelector(".sectionCard");
 
-    const projetCard = document.createElement("article");
+//     const projetCard = document.createElement("article");
 
-    const nomCard = document.createElement("h3");
-    nomCard.innerText = card.nom;
+//     const nomCard = document.createElement("h3");
+//     nomCard.innerText = card.nom;
 
-    const imageCard = document.createElement("img");
-    imageCard.src = card.image;
+//     const imageCard = document.createElement("img");
+//     imageCard.src = card.image;
 
-    const technologiesCard = document.createElement("p");
-    technologiesCard.innerText = card.technologies;
+//     const technologiesCard = document.createElement("p");
+//     technologiesCard.innerText = card.technologies;
 
-    const boutonCard = document.createElement("button");
-    boutonCard.classList.toggle("button")
-    boutonCard.innerText = ("voir")
+//     const boutonCard = document.createElement("button");
+//     boutonCard.classList.toggle("button")
+//     boutonCard.innerText = ("voir")
 
 
-    sectionCard.appendChild(projetCard);
-    projetCard.appendChild(nomCard);
-    projetCard.appendChild(imageCard);
-    projetCard.appendChild(technologiesCard);
-    projetCard.appendChild(boutonCard);
-}
+//     sectionCard.appendChild(projetCard);
+//     projetCard.appendChild(nomCard);
+//     projetCard.appendChild(imageCard);
+//     projetCard.appendChild(technologiesCard);
+//     projetCard.appendChild(boutonCard);
+// }
 
 /// MENU DEROULANT ///
 
@@ -47,8 +47,6 @@ function toggleNav() {
 
 
 const contactSection = document.getElementById('contact');
-
-const divTwoContact = document.createElement('div');
 
 const divContact = document.createElement('div');
 
@@ -100,3 +98,33 @@ contactForm.appendChild(boutonEnvoyer);
 
 
 
+new Swiper('.card-wrapper', {
+    // Optional parameters
+    loop: true,
+    spaceBetween: 30,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
