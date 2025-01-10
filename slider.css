@@ -47,6 +47,10 @@ ul {
     transition: 0.2s ease;
 }
 
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
 .card-list .card-item .card-link:hover {
     border-color: #879efb;
 }
