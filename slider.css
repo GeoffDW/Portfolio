@@ -6,6 +6,8 @@
     background: linear-gradient(#ECEFFE, #CED6FB);
     font-family: 'Teko', sans-serif;
     padding-bottom: 20px;
+    z-index: 1;
+    position: relative;
 
     h2 {
         font-family: "teko";
@@ -16,8 +18,13 @@
         font-size: 2.5em;
         color: rgb(38, 55, 112);
         margin: 0;
-        padding-top: 30px;
+        margin-top: -20px;
+        padding-bottom: 20px;
     }
+}
+
+.swiper {
+    margin-bottom: 20px;
 }
 
 ul {
@@ -115,10 +122,8 @@ ul {
 
 @media screen and (max-width: 768px) {
     .card-wrapper {
-        margin: 0 10px 25px;
     }
 
     .card-wrapper .swiper-slide-button {
-        display: none;
     }
 }
