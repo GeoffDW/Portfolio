@@ -97,6 +97,61 @@ header nav li {
 
 }
 
+/***** RESPONSIVE ****/
+
+@media screen and (min-width: 768px) {
+    .nav-toggler {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    header nav {
+        width: 100%;
+        position: relative;
+        gap: 20px;
+        background: rgb(38, 55, 112);
+        text-decoration: none;
+        transform: none;
+        transition: none;
+
+        ul {
+            padding: 0;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 60px;
+
+
+            li {
+                list-style-type: none;
+        
+                a:hover {
+                    color: #b8dafb;
+                    transform: scale(1.1);
+                    transition: 0.3s ease-in-out;
+                }
+
+                .fa-brands {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    nav.active {
+        display: none;
+    }
+
+
+}
+
 /***** PRESENTATION ****/
 
 
@@ -126,8 +181,12 @@ header nav li {
         padding: 0 20px;
         font-size: 1.6em;
     }
+}
 
-
+@media screen and (min-width: 768px) {
+    #presentation {
+        background-image: none;
+    }
 }
 
 /***** A PROPOS ****/
@@ -229,7 +288,7 @@ header nav li {
 }
 
 
-    /* img {
+/* img {
         width: 100%;
         height: 230px;
         margin-top: 10px;
@@ -327,12 +386,14 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
 footer nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
 }
+
 footer ul {
     display: flex;
     flex-direction: row;
@@ -343,9 +404,11 @@ footer ul {
     font-size: 2.2em;
     padding: 0;
 }
+
 footer li {
     list-style-type: none;
 }
+
 footer a {
     display: flex;
     flex-direction: row;
@@ -356,49 +419,10 @@ footer a {
     margin-bottom: 10px;
     font-family: "roboto", sans-serif;
 }
+
 footer p {
     color: #b8dafb;
     text-align: center;
     font-size: 1em;
     font-family: "satoshi", sans-serif;
 }
-
-
-
-
-/* header {
-    background-color: rgb(38, 55, 112);
-    height: 100px;
-
-}
-
-.header-nav {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Tanker', sans-serif;
-    justify-content: center;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 30px;
-    font-size: large;
-}
-
-li {
-    list-style-type: none;
-
-    a {
-        display: flex;
-        flex-direction: row;
-        text-decoration: none;
-        color: white;
-        font-size: 1.2em;
-    }
-
-    a:hover {
-        color: rgb(194, 225, 255);
-    }
-} */
