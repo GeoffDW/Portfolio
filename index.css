@@ -119,7 +119,7 @@ header nav li {
         transition: none;
 
         ul {
-            padding-left: 192px;
+            padding-left: 212px;
             margin-top: -22px;
             margin-bottom: 20px;
             display: flex;
@@ -130,7 +130,7 @@ header nav li {
                 list-style-type: none;
 
                 a {
-                    font-size: 1.6em;
+                    font-size: 1.4em;
                     transition: all 0.3s ease;
                 }
 
