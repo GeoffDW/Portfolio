@@ -3,10 +3,33 @@ body {
     margin: 0;
 }
 
-h2 {
-    font-family: 'satochi', serif;
-    font-size: 2em;
+
+
+/***** BOUTON SCROLL ****/
+
+
+.btn {
+    height: 50px;
+    width: 50px;
+    background: #5e7bab;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
 }
+
+.icone {
+    width: 25px;
+    color: white;
+}
+
 
 /***** HEADER ****/
 
@@ -98,8 +121,6 @@ header nav li {
 
 }
 
-/***** RESPONSIVE ****/
-
 @media screen and (min-width: 768px) {
     .nav-toggler {
         display: none;
@@ -120,8 +141,8 @@ header nav li {
 
         ul {
             padding-left: 212px;
-            margin-top: -22px;
-            margin-bottom: 20px;
+            margin-top: -29px;
+            margin-bottom: 12px;
             display: flex;
             flex-direction: row;
             gap: 90px;
@@ -131,6 +152,7 @@ header nav li {
 
                 a {
                     font-size: 1.4em;
+                    font-weight: 600;
                     transition: all 0.3s ease;
                 }
 
@@ -159,18 +181,17 @@ header nav li {
     background-color: white;
     font-family: 'Teko', sans-serif;
     width: 100%;
-    /* background-image: url(./images/design.png); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* Évite la répétition de l'image */
-    background-position: center;
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
 
     h1 {
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 92%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 3.3em;
+        font-size: 3.8em;
         font-weight: 200;
         text-align: center;
         margin: 0;
@@ -355,12 +376,29 @@ header nav li {
     position: relative;
     z-index: 0;
 
+    h2 {
+        font-family: "teko";
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 2.5em;
+        color: rgb(215, 215, 255);
+        padding-top: 60px;
+        padding-bottom: 20px;
+        margin: 0;
+        animation: reveal linear;
+        animation-timeline: view();
+    }
+
     h3 {
         font-family: 'roboto', sans-serif;
         font-weight: 600;
-        font-size: 1em;
+        font-size: 1.2em;
         text-align: center;
         color: rgb(215, 215, 255);
+        animation: reveal linear;
+        animation-timeline: view();
     }
 }
 
@@ -375,6 +413,8 @@ header nav li {
     flex-wrap: wrap;
     gap: 35px;
     padding: 16px;
+    animation: reveal linear;
+    animation-timeline: view();
 
     div {
         display: flex;
@@ -383,11 +423,12 @@ header nav li {
     img {
         width: 50px;
         height: 50px;
+        transition: all 0.3s ease;
+
 
         &:hover {
             content: "HTML5 - Langage de balisage";
             transform: scale(1.1);
-            transition: transform 0.3s, 0.3s;
         }
     }
 }
@@ -402,19 +443,6 @@ header nav li {
     font-size: 0.9em;
     text-align: center;
     color: black;
-}
-
-#skills h2 {
-    font-family: "teko";
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-weight: 400;
-    font-size: 2.5em;
-    color: rgb(215, 215, 255);
-    padding-top: 60px;
-    padding-bottom: 20px;
-    margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -594,6 +622,17 @@ footer p {
     }
 
     footer nav {
-    font-size: 1.2em;
+        font-size: 1.2em;
+    }
 }
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
