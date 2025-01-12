@@ -1,34 +1,42 @@
 [
     {
         "src": "./images/logos/html5.webp",
-        "alt": "logo HTML5"
+        "alt": "logo HTML5",
+        "name": "HTML"
     },
     {
         "src": "./images/logos/css3.webp",
-        "alt": "logo CSS3"
+        "alt": "logo CSS3",
+        "name": "CSS"
     },
     {
         "src": "./images/logos/sass.webp",
-        "alt": "logo SASS"
+        "alt": "logo SASS",
+        "name": "SASS"
     },
     {
         "src": "./images/logos/javascript.webp",
-        "alt": "logo JAVASCRIPT"
+        "alt": "logo JAVASCRIPT",
+        "name": "JAVASCRIPT"
     },
     {
         "src": "./images/logos/react.webp",
-        "alt": "logo REACT"
+        "alt": "logo REACT",
+        "name": "REACT"
     },
     {
         "src": "./images/logos/figma.webp",
-        "alt": "logo FIGMA"
+        "alt": "logo FIGMA",
+        "name": "FIGMA"
     },
     {
         "src": "./images/logos/github.webp",
-        "alt": "logo GITHUB"
+        "alt": "logo GITHUB",
+        "name": "GITHUB"
     },
     {
         "src": "./images/logos/seo.webp",
-        "alt": "logo SEO"
+        "alt": "logo SEO",
+        "name": "SEO"
     }
 ]
