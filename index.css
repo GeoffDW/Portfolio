@@ -151,7 +151,7 @@ header nav li {
                 list-style-type: none;
 
                 a {
-                    font-size: 1.4em;
+                    font-size: 1.3em;
                     font-weight: 600;
                     transition: all 0.3s ease;
                 }
@@ -174,6 +174,12 @@ header nav li {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    header nav a {
+        font-size: 1px;
+    }
+}
+
 /***** PRESENTATION ****/
 
 
@@ -191,25 +197,27 @@ header nav li {
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 92%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 3.8em;
+        font-size: 4em;
         font-weight: 200;
         text-align: center;
         margin: 0;
-        transform: translateX(-800px);
+        transform: translateX(-600px);
         opacity: 0;
-        animation: apparition 0.8s ease-out forwards;
+        animation: apparition 1s ease-out forwards;
+        scroll-behavior: smooth;
 
     }
 
     h2 {
-        font-family: "satoshi";
+        font-family: "roboto", sans-serif;
         font-weight: 400;
         text-align: center;
         padding: 0 20px;
-        font-size: 1.6em;
-        transform: translateX(800px);
+        font-size: 2em;
+        transform: translateX(600px);
         opacity: 0;
-        animation: apparition 1.5s ease-out forwards;
+        animation: apparition 1.3s ease-out forwards;
+        scroll-behavior: smooth;
     }
 
     a {
@@ -228,7 +236,7 @@ header nav li {
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.5em;
         }
 
         a {
@@ -246,7 +254,9 @@ header nav li {
             margin: auto;
             margin-top: 50px;
             text-decoration: none;
+            transition: all 0.5s ease;
             animation: slideBottom 1.7s ease-out forwards;
+            scroll-behavior: smooth;
 
             &:hover {
                 background-color: #cbe5ff;
@@ -266,23 +276,27 @@ header nav li {
     line-height: 0;
 }
 
-.wave {
-    position: absolute;
-    /* La vague est positionnée relativement au parent */
+.img-wave-1 {
     width: 100%;
-    /* Étend la vague sur toute la largeur */
-    height: auto;
-    /* Conserve le ratio de l'image de la vague */
-    bottom: -1px;
-    /* Ajuste légèrement pour éviter un espace blanc */
+    object-fit: cover;
 }
 
-.wave-container svg {
-    position: relative;
-    display: block;
+.img-wave-2 {
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-wave-3 {
+    width: 100%;
+    object-fit: cover;
+    margin-top: -120px;
+}
+
+.wave {
+    position: absolute;
     width: 100%;
     height: auto;
-    margin-bottom: -1px;
+    bottom: -1px;
 }
 
 .wave-container-two {
@@ -299,9 +313,27 @@ header nav li {
     height: auto;
     line-height: 0;
     z-index: 1;
-    margin-top: -65px;
 }
 
+@media screen and (min-width: 768px) {
+    .img-wave-1 {
+        margin-top: 34px;
+        width: 100%;
+        height: 152px;
+    }
+
+    .img-wave-3 {
+        margin-top: -160px;
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .img-wave-3 {
+        margin-top: -256px;
+        height: 112px;
+    }
+}
 
 
 /***** A PROPOS ****/
@@ -314,7 +346,6 @@ header nav li {
     section {
         display: flex;
         flex-direction: column;
-        margin-bottom: -110px;
     }
 
     h2 {
@@ -332,7 +363,7 @@ header nav li {
 
     img {
         width: 250px;
-        border-radius: 3%;
+        border-radius: 8%;
         display: flex;
         margin: auto;
         margin-bottom: 30px;
@@ -341,49 +372,64 @@ header nav li {
     p {
         margin: 20px 0 106px 30px;
         font-size: 1.2em;
-        animation: slide linear;
-        animation-timeline: view();
     }
 }
 
 @media screen and (min-width: 768px) {
     #a-propos {
         section {
-            flex-direction: row;
             margin-bottom: 0;
             align-items: center;
         }
 
         img {
             width: 300px;
+            margin: 0;
+            padding: 20px;
         }
 
         h2 {
-            font-size: 3.2em;
-            margin-top: 0;
+            font-size: 2.5em;
+            margin-top: -72px;
+            z-index: 1;
+            position: relative;
         }
 
         p {
-            width: 60%;
-            margin-bottom: 0;
+            width: 70%;
+            margin-bottom: 55px;
             padding: 30px;
-            font-size: 1.4em;
+            font-size: 1.6em;
+            text-align: justify;
         }
     }
 }
 
+@media screen and (min-width: 1024px) {
+    #a-propos {
+        section {
+            flex-direction: row;
+            margin-bottom: 0;
+            align-items: center;
+            justify-content: center;
+            padding: 0 130px;
+
+            p {
+                width: 35%;
+                font-size: 1.1em;
+            }
+        }
+    }
+}
 
 /***** SKILLS ****/
 
 #skills {
     background: url(./images/fond-ecran-bleu-titre-fond-ecran-bleu_483537-4469.webp);
     background-size: cover;
-    opacity: 0.8;
-    height: 730px;
-    margin-top: -80px;
     padding-top: 0;
+    padding-bottom: 70px;
     position: relative;
-    z-index: 0;
 
     h2 {
         font-family: "teko";
@@ -393,11 +439,10 @@ header nav li {
         font-weight: 400;
         font-size: 2.5em;
         color: rgb(215, 215, 255);
-        padding-top: 60px;
         padding-bottom: 20px;
-        margin: 0;
+        padding-top: 45px;
+        margin-top: 0;
         animation: reveal linear;
-        animation-timeline: view();
     }
 
     h3 {
@@ -407,7 +452,6 @@ header nav li {
         text-align: center;
         color: rgb(215, 215, 255);
         animation: reveal linear;
-        animation-timeline: view();
     }
 }
 
@@ -423,7 +467,6 @@ header nav li {
     gap: 35px;
     padding: 16px;
     animation: reveal linear;
-    animation-timeline: view();
 
     div {
         display: flex;
@@ -449,27 +492,42 @@ header nav li {
     text-align: center;
     font-family: 'roboto', sans-serif;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
     color: black;
 }
 
 @media screen and (min-width: 768px) {
+    #skills {
+        padding-bottom: 100px;
+    }
+
     .sectionFront {
         gap: 100px;
     }
 
     #skills h2 {
-        font-size: 3.2em;
+        font-size: 2.5em;
     }
 
     #skills h3 {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     #skills div img {
-        width: 70px;
-        height: 70px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #skills {
+        padding-bottom: 106px;
+        z-index: 0;
+    }
+
+    #skills h2 {
+        font-size: 2.5em;
     }
 }
 
@@ -499,7 +557,7 @@ header nav li {
 
 #contact div {
     background: #263770;
-    width: 350px;
+    width: 70%;
     margin: auto;
     border-radius: 10px;
     opacity: 0.8;
@@ -567,10 +625,16 @@ header nav li {
     }
 
     #contact h2 {
-        font-size: 3.2em;
+        font-size: 2.5em;
     }
-
 }
+
+@media screen and (min-width: 1024px) {
+    #contact h2 {
+        font-size: 2.5em;
+    }
+}
+
 
 
 /***** FOOTER ****/
@@ -579,7 +643,6 @@ header nav li {
 
 footer {
     background-color: #0f1e50;
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -621,7 +684,7 @@ footer a {
 footer p {
     color: #b8dafb;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: "satoshi", sans-serif;
 }
 
@@ -630,8 +693,8 @@ footer p {
         height: 250px;
     }
 
-    footer nav {
-        font-size: 1.2em;
+    footer p {
+        font-size: 1.3em;
     }
 }
 
@@ -683,3 +746,25 @@ footer p {
         /* L'élément revient à sa position initiale */
     }
 }
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate {
+    opacity: 0; /* Initialement masqué */
+    transition: opacity 0.3s ease-out; /* Douce transition pour les styles initiaux */
+  }
+  
+  .animate.show {
+    animation: slideIn 1s ease-out forwards; /* Animation activée */
+    opacity: 1;
+  }
+  
