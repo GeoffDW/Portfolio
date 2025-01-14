@@ -340,7 +340,7 @@ header nav li {
 
 
 #a-propos {
-    background: #e2f0fd;
+    background: #e7f3fd;
     font-family: 'satoshi', serif;
 
     section {
@@ -367,6 +367,8 @@ header nav li {
         display: flex;
         margin: auto;
         margin-bottom: 30px;
+        position: relative;
+        right: 1200px;
     }
 
     p {
@@ -386,10 +388,12 @@ header nav li {
             width: 300px;
             margin: 0;
             padding: 20px;
+            position: relative;
+            right: 700px;
         }
 
         h2 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-top: -72px;
             z-index: 1;
             position: relative;
@@ -414,6 +418,7 @@ header nav li {
             justify-content: center;
             padding-left: 300px;
             margin: auto;
+            padding-bottom: 20px;
 
             p {
                 width: 60%;
@@ -523,12 +528,14 @@ header nav li {
 
 @media screen and (min-width: 1024px) {
     #skills {
-        padding-bottom: 106px;
+        padding-bottom: 150px;
         z-index: 0;
     }
 
     #skills h2 {
-        font-size: 2.5em;
+        font-size: 2.8em;
+        padding-top: 65px;
+        opacity: 0;
     }
 }
 
@@ -632,7 +639,7 @@ header nav li {
 
 @media screen and (min-width: 1024px) {
     #contact h2 {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
 }
 
