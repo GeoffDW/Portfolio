@@ -9,15 +9,30 @@ btn.addEventListener("click", () => {
     });
 });
 
-const elements = document.querySelector('.animate');
+let selection = Splitting()
 
-window.addEventListener('scroll', () => {
-    elements.forEach(element => {
-        const position = element.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
+gsap.registerPlugin(ScrollTrigger)
 
-        if (position < screenHeight - 100) { // Si l'élément est visible
-            element.classList.add('show');
-        }
-        }
-    )});
+gsap.from(selection[0].chars, {
+    color: "#e2f0fd", 
+    stagger: 0.5,
+    scrollTrigger: {
+        trigger: ".text-reveal",
+        start: "top 70%",
+        end: "bottom 40%",
+        scrub: true,
+    }
+})
+
+const lenis = new Lenis();
+
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 3000); 
+});
+
+gsap.ticker.lagSmoothing(0);
+
+
+

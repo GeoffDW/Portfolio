@@ -412,11 +412,12 @@ header nav li {
             margin-bottom: 0;
             align-items: center;
             justify-content: center;
-            padding: 0 130px;
+            padding-left: 300px;
+            margin: auto;
 
             p {
-                width: 35%;
-                font-size: 1.1em;
+                width: 60%;
+                font-size: 1.7em;
             }
         }
     }
