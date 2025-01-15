@@ -211,7 +211,7 @@ header nav li {
         font-weight: 400;
         text-align: center;
         padding: 0 20px;
-        font-size: 2em;
+        font-size: 1.7em;
         transform: translateX(600px);
         opacity: 0;
         animation: apparition 1.3s ease-out forwards;
@@ -366,7 +366,7 @@ header nav li {
         margin: auto;
         margin-bottom: 30px;
         position: relative;
-        right: 1200px;
+        right: 400px;
     }
 
     p {
@@ -388,8 +388,6 @@ header nav li {
             width: 300px;
             margin: 0;
             padding: 20px;
-            position: relative;
-            right: 700px;
         }
 
         h2 {
@@ -424,6 +422,11 @@ header nav li {
                 width: 60%;
                 font-size: 1.7em;
             }
+
+            img {
+                right: 700px;
+                opacity: 0;
+            }
         }
     }
 }
@@ -448,6 +451,8 @@ header nav li {
         padding-bottom: 20px;
         padding-top: 45px;
         margin-top: 0;
+        position: relative;
+        left: 160px;
         opacity: 0;
     }
 
@@ -457,7 +462,6 @@ header nav li {
         font-size: 1.2em;
         text-align: center;
         color: rgb(215, 215, 255);
-        opacity: 0;
     }
 }
 
@@ -472,6 +476,8 @@ header nav li {
     flex-wrap: wrap;
     gap: 35px;
     padding: 16px;
+    position: relative;
+    /* transform: translateX(100px); */
 
     div {
         display: flex;
@@ -482,11 +488,34 @@ header nav li {
         height: 50px;
         transition: all 0.3s ease;
 
-
         &:hover {
             content: "HTML5 - Langage de balisage";
             transform: scale(1.1);
         }
+    }
+}
+
+.sectionMore {
+    background-color: #cbe5ff;
+    width: 70%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 16px;
+}
+
+.sectionMore img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        content: "HTML5 - Langage de balisage";
+        transform: scale(1.1);
     }
 }
 
@@ -706,19 +735,6 @@ footer p {
 }
 
 
-
-@keyframes slide {
-    0% {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-
-    30% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 @keyframes apparition {
     100% {
         opacity: 100%;
@@ -730,7 +746,6 @@ footer p {
     0% {
         opacity: 0;
         transform: translateY(160px);
-        /* L'élément commence en dehors de la vue, vers le bas */
     }
 
     40% {

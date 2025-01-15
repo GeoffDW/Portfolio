@@ -45,7 +45,7 @@ sectionTitle.textContent = "More";
 sectionContainer.appendChild(sectionTitle);
 
 const sectionMore = document.createElement('div');
-sectionMore.classList.add('sectionFront');
+sectionMore.classList.add('sectionMore');
 
 
 const selectedSkillsTwo = skills.slice(5, 9);
