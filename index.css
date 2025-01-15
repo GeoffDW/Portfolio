@@ -204,8 +204,6 @@ header nav li {
         transform: translateX(-600px);
         opacity: 0;
         animation: apparition 1s ease-out forwards;
-        scroll-behavior: smooth;
-
     }
 
     h2 {
@@ -372,8 +370,10 @@ header nav li {
     }
 
     p {
-        margin: 20px 0 106px 30px;
+        margin: 20px 0 106px;
         font-size: 1.2em;
+        text-align: justify;
+        padding: 20px;
     }
 }
 
@@ -448,7 +448,7 @@ header nav li {
         padding-bottom: 20px;
         padding-top: 45px;
         margin-top: 0;
-        animation: reveal linear;
+        opacity: 0;
     }
 
     h3 {
@@ -457,7 +457,7 @@ header nav li {
         font-size: 1.2em;
         text-align: center;
         color: rgb(215, 215, 255);
-        animation: reveal linear;
+        opacity: 0;
     }
 }
 
@@ -472,7 +472,6 @@ header nav li {
     flex-wrap: wrap;
     gap: 35px;
     padding: 16px;
-    animation: reveal linear;
 
     div {
         display: flex;
@@ -706,17 +705,7 @@ footer p {
     }
 }
 
-@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(60px);
-    }
 
-    30% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 @keyframes slide {
     0% {
@@ -754,25 +743,3 @@ footer p {
         /* L'élément revient à sa position initiale */
     }
 }
-
-@keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate {
-    opacity: 0; /* Initialement masqué */
-    transition: opacity 0.3s ease-out; /* Douce transition pour les styles initiaux */
-  }
-  
-  .animate.show {
-    animation: slideIn 1s ease-out forwards; /* Animation activée */
-    opacity: 1;
-  }
-  

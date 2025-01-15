@@ -9,6 +9,8 @@ btn.addEventListener("click", () => {
     });
 });
 
+
+
 let selection = Splitting()
 
 gsap.registerPlugin(ScrollTrigger)
@@ -24,6 +26,20 @@ gsap.from(selection[0].chars, {
     }
 })
 
+gsap.matchMedia().add("(max-width: 768px)", () => {
+    gsap.from(selection[0].chars, {
+        color: "#e2f0fd", 
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: ".text-reveal",
+            start: "top 30%",
+            end: "bottom 70%",
+        }
+    })
+})
+
+
+
 const lenis = new Lenis();
 
 lenis.on('scroll', ScrollTrigger.update);
@@ -31,8 +47,8 @@ lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => {
   lenis.raf(time * 2700); 
 });
-
 gsap.ticker.lagSmoothing(0);
+
 
 
 const aProposImg = document.querySelector("#a-propos img")
@@ -51,18 +67,21 @@ gsap.to(aProposImg, {
 })
 })
 
+
+
 gsap.matchMedia().add("(max-width: 768px)", () => {
 
     gsap.to(aProposImg, {
         xPercent : 480,
         scrollTrigger : {
             trigger : aProposImg,
-            start : "top 95%",
+            start : "bottom 35%",
             end : "bottom 10%",
             scrub : true,
         }
     })
 })
+
 
 
 const skillsTitle = document.querySelector("#skills h2")
@@ -74,7 +93,21 @@ gsap.to(skillsTitle, {
         trigger: skillsTitle,
         start: "top 80%",
         end: "top 50%",
-        markers: true,
         scrub: true,
     }
 })
+
+
+// const skillsSection = document.querySelector("#skills div img")
+
+// gsap.to(skillsSection, {
+//     opacity: 1,
+//     duration: 3,
+//     scrollTrigger: {
+//         trigger: skillsTitle,
+//         start: "top 80%",
+//         end: "top 50%",
+//         scrub: true,
+//     }
+// })
+
