@@ -201,9 +201,11 @@ header nav li {
         font-weight: 200;
         text-align: center;
         margin: 0;
-        transform: translateX(-600px);
+        transform: translateX(-400px);
         opacity: 0;
         animation: apparition 1s ease-out forwards;
+        scroll-behavior: smooth;
+        transition: all 2s ease;
     }
 
     h2 {
@@ -212,8 +214,9 @@ header nav li {
         text-align: center;
         padding: 0 20px;
         font-size: 1.7em;
-        transform: translateX(600px);
+        transform: translateX(400px);
         opacity: 0;
+        transition: 10s;
         animation: apparition 1.3s ease-out forwards;
         scroll-behavior: smooth;
     }
@@ -370,7 +373,7 @@ header nav li {
     }
 
     p {
-        margin: 20px 0 106px;
+        margin: 20px 0 60px;
         font-size: 1.2em;
         text-align: justify;
         padding: 20px;
@@ -447,13 +450,11 @@ header nav li {
         justify-content: center;
         font-weight: 400;
         font-size: 2.5em;
-        color: rgb(215, 215, 255);
+        color: #e7f3fd;
         padding-bottom: 20px;
         padding-top: 45px;
         margin-top: 0;
-        position: relative;
-        left: 160px;
-        opacity: 0;
+        transform: translateY(-110px);
     }
 
     h3 {
@@ -462,6 +463,9 @@ header nav li {
         font-size: 1.2em;
         text-align: center;
         color: rgb(215, 215, 255);
+        top: 80px;
+        position: relative;
+        opacity: 0;
     }
 }
 
@@ -477,7 +481,8 @@ header nav li {
     gap: 35px;
     padding: 16px;
     position: relative;
-    /* transform: translateX(100px); */
+    opacity: 0;
+    transform: translateX(-400px);
 
     div {
         display: flex;
@@ -504,8 +509,11 @@ header nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 100px;
     padding: 16px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(400px);
 }
 
 .sectionMore img {
@@ -563,7 +571,6 @@ header nav li {
     #skills h2 {
         font-size: 2.8em;
         padding-top: 65px;
-        opacity: 0;
     }
 }
 
