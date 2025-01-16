@@ -86,7 +86,7 @@ gsap.to(skillsTitle, {
         trigger: skillsTitle,
         start: "top 65%",
         end: "top 50%",
-        scrub: !0,
+        scrub: true,
     },
 });
 
@@ -99,7 +99,7 @@ gsap.to(skillsSecondTitle, {
         trigger: skillsSecondTitle,
         start: "top 60%",
         end: "top 30%",
-        scrub: !0,
+        scrub: true,
     },
 });
 
@@ -115,7 +115,7 @@ const interval = setInterval(() => {
                 trigger: skillsSection,
                 start: "top 75%",
                 end: "top 30%",
-                scrub: !0,
+                scrub: true,
             },
         });
         clearInterval(interval);
@@ -134,8 +134,7 @@ const intervalTwo = setInterval(() => {
                 trigger: skillsSectionTwo,
                 start: "top 75%",
                 end: "top 30%",
-                scrub: !0,
-                markers: !0,
+                scrub: true,
             },
         });
         clearInterval(interval);
