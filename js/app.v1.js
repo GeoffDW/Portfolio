@@ -47,6 +47,7 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
+
 const aProposImg = document.querySelector("#a-propos img");
 
 gsap.matchMedia().add("(min-width: 1024px)", () => {
@@ -107,7 +108,6 @@ gsap.to(skillsSecondTitle, {
 const interval = setInterval(() => {
     const skillsSection = document.querySelector("#skills .sectionFront");
     if (skillsSection) {
-        console.log("Élément trouvé :", skillsSection);
         gsap.to(skillsSection, {
             x: 0,
             opacity: 1,
@@ -123,20 +123,19 @@ const interval = setInterval(() => {
 }, 100);
 
 
-const intervalTwo = setInterval(() => {
-    const skillsSectionTwo = document.querySelector("#skills .sectionMore");
-    if (skillsSectionTwo) {
-        console.log("Élément trouvé :", skillsSectionTwo);
-        gsap.to(skillsSectionTwo, {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: skillsSectionTwo,
-                start: "top 75%",
-                end: "top 30%",
-                scrub: true,
-            },
-        });
-        clearInterval(interval);
-    }
-}, 100);
+// const intervalTwo = setInterval(() => {
+//     const skillsSectionTwo = document.querySelector("#skills .sectionMore");
+//     if (skillsSectionTwo) {
+//         gsap.to(skillsSectionTwo, {
+//             x: 0,
+//             opacity: 1,
+//             scrollTrigger: {
+//                 trigger: skillsSectionTwo,
+//                 start: "top 75%",
+//                 end: "top 30%",
+//                 scrub: true,
+//             },
+//         });
+//         clearInterval(interval);
+//     }
+// }, 100);

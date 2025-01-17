@@ -1,57 +1,77 @@
 [
     {
-        "id": 1,
-        "nom": "OhMyFood",
-        "image": "images/ohmyfood.webp",
-        "technologies": "HTML | CSS | SASS",
-        "lien": "https://geoffdw.github.io/OhMyFood/"
+        "id": "booki",
+        "title": "Booki",
+        "description": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS.",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Gérer les événements utilisateurs avec JavaScript",
+            "Manipuler les éléments du DOM avec JavaScript",
+            "Récupérer les données utilisateurs dans le JavaScript via des formulaires"
+        ]
     },
-    
     {
-        "id": 2,
-        "nom": "Booki",
-        "image": "images/booki.webp",
-        "technologies": "HTML | CSS",
-        "lien": "https://geoffdw.github.io/booki/"
+        "id": "ohmyfood",
+        "title": "OhMyFood",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Versionner son projet avec Git et Github",
+            "Intégrer une maquette en mobile-first",
+            "Mettre en œuvre des animations CSS"
+        ],
+        "description": "Amélioration de l'interface d'un site mobile avec des animations SASS."
     },
-
     {
-        "id": 3,
-        "nom": "Kasa",
-        "image": "images/kasa.webp",
-        "technologies": "HTML | CSS | JAVASCRIPT",
-        "lien": "https://geoffdw.github.io/kasa/"
+        "id": "kasa",
+        "title": "Kasa",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Initialiser une application avec Create React App",
+            "Configurer la navigation entre les pages de l'application avec React Router",
+            "Développer des éléments de l'interface d'un site web grâce à des composants React",
+            "Mettre en œuvre des animations CSS"
+        ],
+        "description": "Implémentation du front-end d’une application de logement en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive."
     },
-
     {
-        "id": 4,
-        "nom": "Sophie Buel",
-        "image": "images/sophiebluel.webp",
-        "technologies": "HTML | CSS | JAVASCRIPT",
-        "lien": "https://geoffdw.github.io/sophiebuel/"
+        "id": "sophiebuel",
+        "title": "Sophie Buel",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Gérer les événements utilisateurs avec JavaScript",
+            "Manipuler les éléments du DOM avec JavaScript",
+            "Récupérer les données utilisateurs dans le JavaScript via des formulaires"
+        ],
+        "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur en utilisant JavaScript et en communiquant avec une API."
     },
-
     {
-        "id": 5,
-        "nom": "724",
-        "image": "images/724.webp",
-        "technologies": "HTML | CSS | JAVASCRIPT",
-        "lien": "https://geoffdw.github.io/724/"
+        "id": "ninacarducci",
+        "title": "Nina Carducci",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Optimiser la performance d'un site web"
+        ],
+        "description": "Optimisation du référencement d’un site de photographe, en améliorant sa performance et son accessibilité."
     },
-
     {
-        "id": 6,
-        "nom": "Nina Carducci",
-        "image": "images/ninacarducci.webp",
-        "technologies": "SEO | Performance",
-        "lien": "https://geoffdw.github.io/OhMyFood/"
-    }, 
-
+        "id": "724",
+        "title": "724 Events",
+        "titre": "Objectifs pédagogiques:",
+        "objectifs": [
+            "Débugger un site web grâce aux Chrome DevTools",
+            "Rédiger un cahier de recette pour tester un site",
+            "Comprendre les différents tests : tests fonctionnels, tests d'intégration, test unitaire"
+        ],
+        "description": "Ce projet m'a permis de débugger et de finaliser le développement d'un site événementiel one-page."
+    },
     {
-        "id": 7,
-        "nom": "Argent Bank",
-        "image": "images/argentbank.webp",
-        "technologies": "HTML | CSS | REACT",
-        "lien": "https://geoffdw.github.io/argentbank/"
+        "id": "argentbank",
+        "title": "Argent Bank",
+        "objectifs": [
+            "Configurer des routes API pour la communication client / serveur",
+            "Implémenter la gestion des données avec Redux pour assurer le fonctionnement du front",
+            "Afficher les données du back end sur l'interface via des appels API"
+        ],
+        "description": "Dans ce projet, j'ai travaillé sur le développement front-end d’une application bancaire en utilisant React et Redux pour créer une expérience utilisateur dynamique et réactive. Ma mission principale était d'intégrer le front-end avec le back-end via des appels API. J'ai également écrit des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur."
     }
 ]

@@ -65,22 +65,93 @@ contactForm.appendChild(textareaMessage);
 contactForm.appendChild(boutonEnvoyer);
 
 
-/// CAR PORTFOLIO ///
+/// MODAL ///
+
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const modalTitle = document.querySelector(".modal-title");
+const modalDescription = document.querySelector(".modal-description");
+const modalObjectives = document.querySelector(".modal-objectives");
+
+if (!overlay || !modal || !modalTitle || !modalDescription || !modalObjectives) {
+    console.error("Un ou plusieurs éléments de la modal sont introuvables !");
+}
+
+let projets = [];
+
+fetch("data/projets.json")
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`Impossible de charger le fichier JSON: ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then((data) => {
+        projets = data; // On stocke la liste des projets
+    })
+    .catch((error) => {
+        console.error("Erreur lors du chargement des projets :", error);
+    });
+
+window.openModal = function (projectId) {
+    // Vérifier que les données ont été chargées avant d'ouvrir la modal
+    if (!projets || projets.length === 0) {
+        console.error("Les données des projets ne sont pas encore chargées.");
+        return;
+    }
+
+    const projet = projets.find((p) => p.id === projectId);
+    if (projet && modalTitle && modalDescription && modalObjectives) {
+        modalTitle.textContent = projet.title;
+        modalDescription.textContent = projet.description;
+
+        // Affichage des objectifs pédagogiques
+        modalObjectives.innerHTML = "<h3>" + projet.titre + "</h3><ul>" + 
+            projet.objectifs.map((objectif) => `<li>${objectif}</li>`).join('') + 
+            "</ul>";
+
+        overlay.style.display = "block";
+        modal.classList.add("modal-open");
+    } else {
+        console.error("Projet introuvable ou élément manquant !");
+    }
+};
+
+window.closeModal = function () {
+    if (overlay && modal) {
+        overlay.style.display = "none";
+        modal.classList.remove("modal-open");
+    }
+};
+
+document.querySelectorAll(".modal-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+        const projectId = button.getAttribute("data-id");
+        window.openModal(projectId);
+    });
+});
+
+if (overlay) {
+    overlay.addEventListener("click", window.closeModal);
+}
+
+
+
+
+
+/// CARD PORTFOLIO ///
 
 
 new Swiper('.card-wrapper', {
-    // Optional parameters
     loop: true,
     spaceBetween: 30,
 
-    // If we need pagination
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         dynamicBullets: true
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

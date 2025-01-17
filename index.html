@@ -12,16 +12,22 @@
     <meta name="description"
         content="Je suis un développeur web front-end junior. Venez découvrir mon portfolio pour explorer mes projets et compétences.">
 
+    <link rel="preload" href="./slider.v1.css" as="style">
     <link rel="preload" href="./images/fond-ecran-bleu-titre-fond-ecran-bleu_483537-4469.webp" as="image">
     <link rel="preload" href="./images/wave1.webp" as="image">
     <link rel="preload" href="./images/wave3.webp" as="image">
     <link rel="preload" href="./images/geoffroymartin.webp" as="image">
 
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description"
+        content="Je suis un développeur web front-end junior. Venez découvrir mon portfolio pour explorer mes projets et compétences.">
+    <meta property="og:image" content="./images/geoffroymartin.webp">
+    <meta property="og:url" content="https://geoffdw.github.io/portfolio/">
+    <meta property="og:type" content="website">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
-    <link rel="preconnect" rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
@@ -32,9 +38,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link href="https://api.fontshare.com/css?f[]=teko@400,700&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
 
-    <script type="module" src="js/index.v1.js" defer></script>
     <script type="module" src="js/logos.v1.js" defer></script>
 
 </head>
@@ -89,7 +93,7 @@
         <section id="a-propos">
             <h2>A propos de moi</h2>
             <section>
-                <img src="./images/geoffroymartin.webp" alt="photo de Geoffroy dans son ancien travail">
+                <img loading="lazy" src="./images/geoffroymartin.webp" alt="photo de Geoffroy dans son ancien travail">
                 <p data-splitting class="text-reveal">
                     Metuentes igitur idem latrones Lycaoniam magna parte campestrem cum se inpares nostris fore
                     congressione stataria documentis frequentibus scirent, tramitibus deviis petivere Pamphyliam diu
@@ -108,71 +112,83 @@
             <h3>Front-end</h3>
         </section>
         <div class="wave-container-three">
-            <img src="./images/wave3.webp" class="img-wave-3">
+            <img loading="lazy" src="./images/wave3.webp" class="img-wave-3">
         </div>
         <section id="portfolio">
             <h2>Portfolio</h2>
+            <div class="overlay" onclick="closeModal()"></div>
+
+            <dialog class="modal">
+                <div class="modal-header">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-description"></p>
+                    <div class="modal-objectives"></div>
+                    <button onclick="closeModal()" class="close-modal-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg> </button>
+                </div>
+            </dialog>
             <div class="container swiper">
                 <div class="card-wrapper">
                     <ul class="card-list swiper-wrapper">
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/Booki" target="_blank" class="card-link">
+                            <a class="card-link">
                                 <img src="images/booki.webp" alt="photo du projet 'Booki'" class="card-image">
                                 <p class="badge"> HTML | CSS </p>
                                 <h3 class="card-title">Booki</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="booki">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/OhMyFood" target="_blank" class="card-link">
+                            <a class="card-link">
                                 <img src="images/ohmyfood.webp" alt="photo du projet 'ohMyFood'" class="card-image">
                                 <p class="badge"> HTML | CSS | SASS </p>
                                 <h3 class="card-title">ohMyFood</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="ohmyfood">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/kasa" target="_blank" class="card-link">
+                            <a class="card-link">
                                 <img src="images/kasa.webp" alt="photo du projet 'Kasa'" class="card-image">
                                 <p class="badge"> HTML | CSS | JAVASCRIPT </p>
                                 <h3 class="card-title">Kasa</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="kasa">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/sophie-bluel" target="_blank" class="card-link">
+                            <a class="card-link">
                                 <img src="images/sophiebluel.webp" alt="photo du projet 'Sophie Buel'"
                                     class="card-image">
                                 <p class="badge"> HTML | CSS | JAVASCRIPT </p>
                                 <h3 class="card-title">Sophie Buel</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="sophiebluel">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/ninacarducci" target="_blank" class="card-link">
+                            <a class="card-link">
                                 <img src="images/ninacarducci.webp" alt="photo du projet 'Nina Carducci'"
                                     class="card-image">
                                 <p class="badge"> CEO | PERFORMANCE </p>
                                 <h3 class="card-title">Nina Carducci</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="ninacarducci">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="https://github.com/GeoffDW/Debuggez-une-application-React.JS" target="_blank"
-                                class="card-link">
+                            <a class="card-link">
                                 <img src="images/724.webp" alt="photo du projet '724'" class="card-image">
                                 <p class="badge"> HTML | CSS | JAVASCRIPT</p>
                                 <h3 class="card-title">724 events</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="724">arrow_forward</button>
                             </a>
                         </li>
                         <li class="card-item swiper-slide">
-                            <a href="#" class="card-link">
+                            <a class="card-link">
                                 <img src="images/argentbank.webp" alt="photo du projet 'Argent Bank'"
                                     class="card-image">
                                 <p class="badge"> HTML | CSS | REACT</p>
                                 <h3 class="card-title">Argent Bank</h3>
-                                <button class="material-symbols-rounded">arrow_forward</button>
+                                <button class="modal-btn material-symbols-rounded" data-id="argentbank">arrow_forward</button>
                             </a>
                         </li>
                     </ul>
@@ -196,21 +212,20 @@
                     <a href="https://github.com/GeoffDW" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/maxime-dev/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
             <p> © 2025 || Tous droits réservés</p>
         </nav>
     </footer>
 
-    <script src="https://unpkg.com/lenis@1.1.19/dist/lenis.min.js"></script>
+    <script type="module" src="js/index.v1.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.19/dist/lenis.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js" defer></script>
     <script type="module" src="js/app.v1.js" defer></script>
-
 
 </body>
 

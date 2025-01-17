@@ -373,6 +373,7 @@ header nav li {
     }
 
     p {
+        font-family: "roboto", sans-serif;
         margin: 20px 0 60px;
         font-size: 1.2em;
         text-align: justify;
