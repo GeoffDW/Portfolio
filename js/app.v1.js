@@ -87,7 +87,6 @@ gsap.to(skillsTitle, {
         trigger: skillsTitle,
         start: "top 65%",
         end: "top 50%",
-        scrub: true,
     },
 });
 
@@ -100,42 +99,35 @@ gsap.to(skillsSecondTitle, {
         trigger: skillsSecondTitle,
         start: "top 60%",
         end: "top 30%",
-        scrub: true,
     },
 });
 
 
 const interval = setInterval(() => {
-    const skillsSection = document.querySelector("#skills .sectionFront");
-    if (skillsSection) {
-        gsap.to(skillsSection, {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: skillsSection,
-                start: "top 75%",
-                end: "top 30%",
-                scrub: true,
-            },
-        });
+    // Cibler les deux sections à la fois
+    const skillsSections = [
+        document.querySelector("#skills .sectionFront"),
+        document.querySelector("#skills .sectionMore")
+    ];
+
+    // Vérifier chaque section
+    skillsSections.forEach((section) => {
+        if (section) {
+            gsap.to(section, {
+                x: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 75%",
+                    end: "top 30%",
+                },
+            });
+        }
+    });
+
+    // Si les deux sections ont été trouvées, arrêter l'intervalle
+    if (skillsSections.every(section => section !== null)) {
         clearInterval(interval);
     }
 }, 100);
 
-
-// const intervalTwo = setInterval(() => {
-//     const skillsSectionTwo = document.querySelector("#skills .sectionMore");
-//     if (skillsSectionTwo) {
-//         gsap.to(skillsSectionTwo, {
-//             x: 0,
-//             opacity: 1,
-//             scrollTrigger: {
-//                 trigger: skillsSectionTwo,
-//                 start: "top 75%",
-//                 end: "top 30%",
-//                 scrub: true,
-//             },
-//         });
-//         clearInterval(interval);
-//     }
-// }, 100);
