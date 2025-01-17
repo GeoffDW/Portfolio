@@ -106,7 +106,7 @@ window.openModal = function (projectId) {
         modalDescription.textContent = projet.description;
 
         // Affichage des objectifs pédagogiques
-        modalObjectives.innerHTML = "<h3>" + projet.titre + "</h3><ul>" + 
+        modalObjectives.innerHTML = "<h4>" + projet.titre + "</h4><ul>" + 
             projet.objectifs.map((objectif) => `<li>${objectif}</li>`).join('') + 
             "</ul>";
 
