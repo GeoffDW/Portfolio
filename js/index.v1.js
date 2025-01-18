@@ -144,7 +144,7 @@ if (overlay) {
 
 new Swiper('.card-wrapper', {
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 50,
 
     pagination: {
         el: '.swiper-pagination',
