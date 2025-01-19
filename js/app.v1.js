@@ -46,7 +46,7 @@ const lenis = new Lenis();
 
 lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => {
-    lenis.raf(time * 2000);
+    lenis.raf(time * 3000);
 });
 
 gsap.ticker.lagSmoothing(0);
@@ -76,7 +76,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
     gsap.to(aProposImg, {
         right: 0,
         opacity: 1,
-        duration: 0.2,
+        duration: 2,
         scrollTrigger: {
             trigger: aProposImg,
             start: "top 65%",
@@ -87,27 +87,9 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
 });
 
 
-const skillsTitle = document.querySelector("#skills h2");
-gsap.to(skillsTitle, {
-    y: 0,
-    scrollTrigger: {
-        trigger: skillsTitle,
-        start: "top 65%",
-        end: "top 50%",
-    },
-});
 
+/// GSAP SECTIONS "SKILLS" ///
 
-const skillsSecondTitle = document.querySelector("#skills h3");
-gsap.to(skillsSecondTitle, {
-    top: 0,
-    opacity: 1,
-    scrollTrigger: {
-        trigger: skillsSecondTitle,
-        start: "top 60%",
-        end: "top 30%",
-    },
-});
 
 
 const interval = setInterval(() => {
@@ -137,4 +119,35 @@ const interval = setInterval(() => {
         clearInterval(interval);
     }
 }, 100);
+
+
+/// GSAP H2 "SKILLS" ///
+
+
+
+const skillsTitle = document.querySelector("#skills h2");
+gsap.to(skillsTitle, {
+    y: 0,
+    scrollTrigger: {
+        trigger: skillsTitle,
+        start: "top 65%",
+        end: "top 50%",
+    },
+});
+
+
+/// GSAP H3 "SKILLS" ///
+
+
+
+const skillsSecondTitle = document.querySelector("#skills h3");
+gsap.to(skillsSecondTitle, {
+    top: 0,
+    opacity: 1,
+    scrollTrigger: {
+        trigger: skillsSecondTitle,
+        start: "top 60%",
+        end: "top 30%",
+    },
+});
 

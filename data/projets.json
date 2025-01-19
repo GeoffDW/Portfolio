@@ -2,13 +2,14 @@
     {
         "id": "booki",
         "title": "Booki",
-        "description": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS.",
         "titre": "Objectifs pédagogiques:",
         "objectifs": [
             "Gérer les événements utilisateurs avec JavaScript",
             "Manipuler les éléments du DOM avec JavaScript",
             "Récupérer les données utilisateurs dans le JavaScript via des formulaires"
-        ]
+        ],
+        "description": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS.",
+        "lien": "https://github.com/GeoffDW/Booki"
     },
     {
         "id": "ohmyfood",
@@ -19,7 +20,8 @@
             "Intégrer une maquette en mobile-first",
             "Mettre en œuvre des animations CSS"
         ],
-        "description": "Amélioration de l'interface d'un site mobile avec des animations SASS."
+        "description": "Amélioration de l'interface d'un site mobile avec des animations SASS.",
+        "lien": "https://github.com/GeoffDW/OhMyFood"
     },
     {
         "id": "kasa",
@@ -31,7 +33,8 @@
             "Développer des éléments de l'interface d'un site web grâce à des composants React",
             "Mettre en œuvre des animations CSS"
         ],
-        "description": "Implémentation du front-end d’une application de logement en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive."
+        "description": "Implémentation du front-end d’une application de logement en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive.",
+        "lien": "https://github.com/GeoffDW/Kasa"
     },
     {
         "id": "sophiebuel",
@@ -42,7 +45,8 @@
             "Manipuler les éléments du DOM avec JavaScript",
             "Récupérer les données utilisateurs dans le JavaScript via des formulaires"
         ],
-        "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur en utilisant JavaScript et en communiquant avec une API."
+        "description": "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur en utilisant JavaScript et en communiquant avec une API.",
+        "lien": "https://github.com/GeoffDW/sophie-bluel"
     },
     {
         "id": "ninacarducci",
@@ -51,7 +55,8 @@
         "objectifs": [
             "Optimiser la performance d'un site web"
         ],
-        "description": "Optimisation du référencement d’un site de photographe, en améliorant sa performance et son accessibilité."
+        "description": "Optimisation du référencement d’un site de photographe, en améliorant sa performance et son accessibilité.",
+        "lien": "https://github.com/GeoffDW/ninacarducci"
     },
     {
         "id": "724",
@@ -62,7 +67,8 @@
             "Rédiger un cahier de recette pour tester un site",
             "Comprendre les différents tests : tests fonctionnels, tests d'intégration, test unitaire"
         ],
-        "description": "Ce projet m'a permis de débugger et de finaliser le développement d'un site événementiel one-page."
+        "description": "Ce projet m'a permis de débugger et de finaliser le développement d'un site événementiel one-page.",
+        "lien": "https://github.com/GeoffDW/Debuggez-une-application-React.JS"
     },
     {
         "id": "argentbank",
@@ -72,6 +78,7 @@
             "Implémenter la gestion des données avec Redux pour assurer le fonctionnement du front",
             "Afficher les données du back end sur l'interface via des appels API"
         ],
-        "description": "Dans ce projet, j'ai travaillé sur le développement front-end d’une application bancaire en utilisant React et Redux pour créer une expérience utilisateur dynamique et réactive. Ma mission principale était d'intégrer le front-end avec le back-end via des appels API. J'ai également écrit des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur."
+        "description": "Dans ce projet, j'ai travaillé sur le développement front-end d’une application bancaire en utilisant React et Redux pour créer une expérience utilisateur dynamique et réactive. Ma mission principale était d'intégrer le front-end avec le back-end via des appels API. J'ai également écrit des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur.",
+        "lien": "https://github.com/GeoffDW/ArgentBank"
     }
 ]
