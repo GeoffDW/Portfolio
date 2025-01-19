@@ -479,7 +479,7 @@ header nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 20px;
     padding: 16px;
     position: relative;
     opacity: 0;
@@ -490,8 +490,8 @@ header nav li {
     }
 
     img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         transition: all 0.3s ease;
 
         &:hover {
@@ -510,16 +510,23 @@ header nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 20px;
     padding: 16px;
     position: relative;
     opacity: 0;
     transform: translateX(400px);
 }
 
+.section-more h3 {
+    text-align: center;
+    margin: 20px 0; 
+    font-size: 1.5rem;
+    color: #fff; 
+}
+
 .sectionMore img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: all 0.3s ease;
 
     &:hover {
@@ -572,6 +579,10 @@ header nav li {
     #skills h2 {
         font-size: 2.8em;
         padding-top: 65px;
+    }
+
+    .sectionFront, .sectionMore {
+        gap: 60px
     }
 }
 
@@ -723,12 +734,18 @@ footer a {
     font-size: 1em;
     margin-bottom: 10px;
     font-family: "roboto", sans-serif;
+
+    &:hover {
+        transition: all 0.3s ease;
+        transform: scale(1.1);
+        color: #a4d1fe;
+    }
 }
 
 footer p {
     color: #b8dafb;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: "satoshi", sans-serif;
 }
 

@@ -7,8 +7,15 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    display: none;
+    opacity: 0; /* Par défaut, invisible */
+    visibility: hidden; /* Empêche l'interaction */
     z-index: 2;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Ajout de la transition */
+}
+
+.overlay.modal-open {
+    opacity: 1; /* Visible */
+    visibility: visible; /* Activé */
 }
 
 .modal {
@@ -16,7 +23,7 @@
     background: linear-gradient(#CED6FB, #ECEFFE);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%); /* Position initiale légèrement en haut */
     width: 80%;
     height: 400px;
     background-color: white;
@@ -24,42 +31,58 @@
     border: none;
     border-radius: 10px;
     padding: 20px;
-    z-index: 2;
+    z-index: 3;
     font-family: "roboto", sans-serif;
-    transition: all 1s; /* fonctionne pas */
-
-    h3 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    p {
-        margin-bottom: 40px;
-    }
-
-    ul {
-        padding: 20px;
-    }
-
-    li {
-        padding-bottom: 5px;
-    }
-
-    h4 {
-        margin-bottom: 10px;
-    }
+    opacity: 0; /* Par défaut, invisible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajout de la transition */
 }
+
+.modal.modal-open {
+    opacity: 1; /* Visible */
+    transform: translate(-50%, -50%); /* Position correcte */
+}
+
+.modal h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal .modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal p {
+    padding-left: 22px;
+}
+
+.modal li {
+    padding-bottom: 5px;
+}
+
+.modal h4 {
+    margin-bottom: 15px;
+}
+
+.modal .modal-objectives {
+    display: flex;
+    flex-direction: column;
+    padding-left: 22px;
+}
+
 
 .modal-open {
     display: block;
-    transition: all 1s; /* fonctionne pas */
+    transition: all 0.5s;
+    /* fonctionne pas */
 
 }
 
 .close-modal-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 3%;
+    right: 2%;
     cursor: pointer;
     background: #CED6FB;
     border: none;
@@ -79,24 +102,32 @@
     .modal {
         width: 60%;
 
-    h4, ul {
-        padding-left: 60px;
+        .modal-objectives {
+            padding-left: 40px;
+        }
+
+        p {
+            padding-left: 40px;
+        }
     }
 
-    p {
-        text-align: center;
-    }
-    }
-    
 }
 
 @media screen and (min-width: 1024px) {
     .modal {
         width: 40%;
+    }
 
-    h4, ul {    
-        padding-left: 37px;
-}
+    .modal-header {
+        padding: 0 15px
+    }
+
+    .modal p {
+        position: relative;
+    }
+
+    .modal-objectives {
+        position: relative;
     }
 }
 
@@ -226,7 +257,7 @@ ul {
 
 @media screen and (max-width: 768px) {
     .card-wrapper {
-        margin: 0 10px 25px;
+        margin: 0 -15px 25px;
     }
 
     .card-wrapper .swiper-slide-button {
@@ -234,7 +265,7 @@ ul {
     }
 
     .card-list .card-link .card-title {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .badge {

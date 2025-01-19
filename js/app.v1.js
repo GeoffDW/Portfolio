@@ -9,32 +9,35 @@ let selection = Splitting();
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.matchMedia().add("(min-width: 1024px)", () => {
-    const scrollOptions = {
-        trigger: ".text-reveal",
-        start: "top 70%",
-        end: "bottom 70%",
-        scrub: 1,
-    };
-    gsap.from(selection[0].chars, {
-        color: "#e2f0fd",
-        stagger: 0.5,
-        scrollTrigger: scrollOptions,
-    });
-});
-
-gsap.matchMedia().add("(max-width: 768px)", () => {
-    gsap.from(selection[0].chars, {
-        color: "#e2f0fd",
-        stagger: 0.2,
-        scrollTrigger: {
-            trigger: ".text-reveal",
-            start: "top 90%",
-            end: "bottom 60%",
-            scrub: 1,
+if (selection && selection[0]?.chars) {
+    gsap.matchMedia().add({
+        "(min-width: 1024px)": () => {
+            gsap.from(selection[0].chars, {
+                color: "#e2f0fd",
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: ".text-reveal",
+                    start: "top 70%",
+                    end: "bottom 70%",
+                    scrub: 1,
+                },
+            });
+        },
+        "(max-width: 768px)": () => {
+            gsap.from(selection[0].chars, {
+                color: "#e2f0fd",
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: ".text-reveal",
+                    start: "top 90%",
+                    end: "bottom 60%",
+                    scrub: 1,
+                },
+            });
         },
     });
-});
+}
+
 
 
 const lenis = new Lenis();
@@ -50,34 +53,36 @@ gsap.ticker.lagSmoothing(0);
 
 const aProposImg = document.querySelector("#a-propos img");
 
-gsap.matchMedia().add("(min-width: 1024px)", () => {
-    gsap.to(aProposImg, {
-        xPercent: 200,
-        opacity: 1,
-        duration: 2,
-        scrollTrigger: {
-            trigger: aProposImg,
-            start: "top 95%",
-            end: "bottom 70%",
-            scrub: 1,
+if (aProposImg) {
+    gsap.matchMedia().add({
+        "(min-width: 1024px)": () => {
+            gsap.to(aProposImg, {
+                xPercent: 200,
+                opacity: 1,
+                duration: 2,
+                scrollTrigger: {
+                    trigger: aProposImg,
+                    start: "top 95%",
+                    end: "bottom 70%",
+                    scrub: 1,
+                },
+            });
+        },
+        "(max-width: 768px)": () => {
+            gsap.to(aProposImg, {
+                right: 0,
+                opacity: 1,
+                duration: 0.2,
+                scrollTrigger: {
+                    trigger: aProposImg,
+                    start: "top 65%",
+                    end: "bottom 50%",
+                    scrub: 1,
+                },
+            });
         },
     });
-});
-
-
-gsap.matchMedia().add("(max-width: 768px)", () => {
-    gsap.to(aProposImg, {
-        right: 0,
-        opacity: 1,
-        duration: 0.2,
-        scrollTrigger: {
-            trigger: aProposImg,
-            start: "top 65%",
-            end: "bottom 50%",
-            scrub: 1,
-        },
-    });
-});
+}
 
 
 const skillsTitle = document.querySelector("#skills h2");
@@ -91,15 +96,17 @@ gsap.to(skillsTitle, {
 });
 
 
-const skillsSecondTitle = document.querySelector("#skills h3");
-gsap.to(skillsSecondTitle, {
-    top: 0,
-    opacity: 1,
-    scrollTrigger: {
-        trigger: skillsSecondTitle,
-        start: "top 60%",
-        end: "top 30%",
-    },
+const skillsTitles = document.querySelectorAll("#skills h3");
+skillsTitles.forEach((title) => {
+    gsap.to(title, {
+        top: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: title,
+            start: "top 60%",
+            end: "top 30%",
+        },
+    });
 });
 
 
