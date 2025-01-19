@@ -66,44 +66,82 @@ contactForm.appendChild(boutonEnvoyer);
 
 
 /// MODAL ///
-const selectors = [".overlay", ".modal", ".modal-title", ".modal-description", ".modal-objectives"];
-const [overlay, modal, modalTitle, modalDescription, modalObjectives] = selectors.map(selector => document.querySelector(selector));
 
-if (selectors.some(el => !el)) {
-    console.error("Un ou plusieurs éléments de la modal sont introuvables !");
-}
+
+const selectors = [
+    ".overlay",
+    ".modal",
+    ".modal-title",
+    ".modal-description",
+    ".modal-objectives",
+    ".modal-link"
+];
+const [overlay, modal, modalTitle, modalDescription, modalObjectives, modalLink] = selectors.map(selector => document.querySelector(selector));
 
 let projets = [];
 
+// Chargement des données du fichier JSON
 fetch("data/projets.json")
-    .then(response => response.ok ? response.json() : Promise.reject(`Erreur : ${response.statusText}`))
-    .then(data => projets = data)
+    .then(response => {
+        if (!response.ok) throw new Error(`Erreur : ${response.statusText}`);
+        return response.json();
+    })
+    .then(data => {
+        projets = data;
+        console.log("Projets chargés :", projets); // Vérifie que les données sont bien chargées
+    })
     .catch(error => console.error("Erreur lors du chargement des projets :", error));
 
 window.openModal = function (projectId) {
-    if (!projets.length) return console.error("Les données des projets ne sont pas encore chargées.");
+    console.log("Ouverture de la modal pour l'ID :", projectId);
+
+    if (!projets.length) {
+        console.error("Les données des projets ne sont pas encore chargées.");
+        return;
+    }
 
     const projet = projets.find(p => p.id === projectId);
-    if (!projet) return console.error("Projet introuvable ou élément manquant !");
+    if (!projet) {
+        console.error("Projet introuvable ou élément manquant !");
+        return;
+    }
+
+    console.log("Projet trouvé :", projet);
 
     modalTitle.textContent = projet.title;
     modalDescription.textContent = projet.description;
     modalObjectives.innerHTML = `<h4>${projet.titre}</h4><ul>${projet.objectifs.map(o => `<li>${o}</li>`).join('')}</ul>`;
+
+    if (projet.lien) {
+        modalLink.href = projet.lien;
+        modalLink.textContent = "Voir le projet";
+        modalLink.style.display = "inline"; 
+    } else {
+        modalLink.style.display = "none"; 
+    }
 
     overlay.classList.add("modal-open");
     modal.classList.add("modal-open");
 };
 
 window.closeModal = () => {
+    console.log("Fermeture de la modal");
     overlay?.classList.remove("modal-open");
     modal?.classList.remove("modal-open");
 };
 
-document.querySelectorAll(".modal-btn").forEach(button =>
-    button.addEventListener("click", () => window.openModal(button.getAttribute("data-id")))
-);
+document.querySelectorAll(".modal-btn").forEach(button => {
+    console.log("Bouton modal trouvé :", button);
+    button.addEventListener("click", () => {
+        const projectId = button.getAttribute("data-id");
+        console.log("ID du projet sélectionné :", projectId);
+        window.openModal(projectId);
+    });
+});
 
 overlay?.addEventListener("click", window.closeModal);
+
+
 
 
 

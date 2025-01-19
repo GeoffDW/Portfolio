@@ -71,6 +71,21 @@
     padding-left: 22px;
 }
 
+.modal-link {
+    font-family: "roboto", sans-serif;
+    border: none;
+    color: white;
+    width: 90px;
+    padding: 1em 1em;
+    font-size: 13px;
+    border-radius: 0.5em;
+    background: #5e7bab;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
 
 .modal-open {
     display: block;
@@ -84,7 +99,7 @@
     top: 3%;
     right: 2%;
     cursor: pointer;
-    background: #CED6FB;
+    background: transparent;
     border: none;
     transition: all 0.5s ease-in-out;
 }
@@ -130,8 +145,6 @@
         position: relative;
     }
 }
-
-
 
 
 /********** PORTFOLIO ************/
