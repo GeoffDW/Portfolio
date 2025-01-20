@@ -3,7 +3,6 @@ const skills = await response.json();
 
 const parentElement = document.getElementById('skills');
 
-// Crée un titre h3 en dehors de la section
 const title = document.createElement('h3');
 title.textContent = "front-end";
 title.classList.add('section-title');
@@ -67,4 +66,46 @@ selectedSkillsTwo.forEach(skill => {
 
 sectionContainer.appendChild(sectionMore);
 parentElement.appendChild(sectionContainer);
+
+
+/// GSAP H3 "SKILLS" ///
+
+
+const skillsSecondTitle = document.querySelector("#skills .section-title");
+
+// Vérifier si l'élément existe
+if (skillsSecondTitle) {
+    console.log("Titre trouvé : ", skillsSecondTitle);
+
+    gsap.to(skillsSecondTitle, {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+            trigger: skillsSecondTitle,
+            start: "top 60%",
+            end: "top 30%",
+        },
+    });
+} else {
+    console.log("Titre non trouvé");
+}
+
+const skillsMoreTitle = document.querySelector("#skills .more-title");
+
+if (skillsMoreTitle) {
+    console.log("Titre trouvé : ", skillsMoreTitle);
+
+    gsap.to(skillsMoreTitle, {
+        opacity: 1, 
+        x: 0,
+        scrollTrigger: {
+            trigger: skillsMoreTitle,
+            start: "top 60%",
+            end: "top 30%",
+        },
+    });
+} else {
+    console.log("Titre non trouvé");
+}
+
 

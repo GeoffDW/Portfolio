@@ -466,6 +466,8 @@ header nav li {
     text-align: center;
     color: rgb(215, 215, 255);
     margin: 20px 0;
+    opacity: 0;
+    transform: translateX(100px);
     color: #fff;
     position: relative;
 }
@@ -477,6 +479,8 @@ header nav li {
     text-align: center;
     color: rgb(215, 215, 255);
     margin: 20px 0;
+    opacity: 0;
+    transform: translateX(-100px);
     color: #fff;
     position: relative;
 }

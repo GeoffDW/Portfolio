@@ -81,7 +81,6 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
             trigger: aProposImg,
             start: "top 65%",
             end: "bottom 50%",
-            scrub: true,
         },
     });
 });
@@ -131,49 +130,5 @@ gsap.to(skillsTitle, {
         trigger: skillsTitle,
         start: "top 65%",
         end: "top 50%",
-        scrub: 1,
     },
 });
-
-
-/// GSAP H3 "SKILLS" ///
-
-
-const skillsSecondTitle = document.querySelector("#skills .section-title");
-
-// Vérifier si l'élément existe
-if (skillsSecondTitle) {
-    console.log("Titre trouvé : ", skillsSecondTitle);
-
-    gsap.to(skillsSecondTitle, {
-        opacity: 1, // Optionnel pour un effet de fondu
-        scrollTrigger: {
-            trigger: skillsSecondTitle,
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true,
-        },
-    });
-} else {
-    console.log("Titre non trouvé");
-}
-
-const skillsMoreTitle = document.querySelector("#skills .more-title");
-
-if (skillsMoreTitle) {
-    console.log("Titre trouvé : ", skillsMoreTitle);
-
-    gsap.to(skillsMoreTitle, {
-        opacity: 1, 
-        scrollTrigger: {
-            trigger: skillsMoreTitle,
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true,
-        },
-    });
-} else {
-    console.log("Titre non trouvé");
-}
-
-
