@@ -14,55 +14,55 @@ function toggleNav() {
 /// CONTACT ///
 
 
-const contactSection = document.getElementById('contact');
+// const contactSection = document.getElementById('contact');
 
-const divContact = document.createElement('div');
+// const divContact = document.createElement('div');
 
-const contactForm = document.createElement('form');
+// const contactForm = document.createElement('form');
 
-const labelPrenom = document.createElement('label');
-labelPrenom.textContent = 'Prénom';
+// const labelPrenom = document.createElement('label');
+// labelPrenom.textContent = 'Prénom';
 
-const inputPrenom = document.createElement('input');
-inputPrenom.type = 'text';
-inputPrenom.name = 'Prénom';
+// const inputPrenom = document.createElement('input');
+// inputPrenom.type = 'text';
+// inputPrenom.name = 'Prénom';
 
-const labelNom = document.createElement('label');
-labelNom.textContent = 'Nom';
+// const labelNom = document.createElement('label');
+// labelNom.textContent = 'Nom';
 
-const inputNom = document.createElement('input');
-inputNom.type = 'text';
-inputNom.name = 'Nom';
+// const inputNom = document.createElement('input');
+// inputNom.type = 'text';
+// inputNom.name = 'Nom';
 
-const labelEmail = document.createElement('label');
-labelEmail.textContent = 'Email';
+// const labelEmail = document.createElement('label');
+// labelEmail.textContent = 'Email';
 
-const inputEmail = document.createElement('input');
-inputEmail.type = 'Email';
-inputEmail.name = 'Email';
+// const inputEmail = document.createElement('input');
+// inputEmail.type = 'Email';
+// inputEmail.name = 'Email';
 
-const labelMessage = document.createElement('label');
-labelMessage.textContent = 'Message';
+// const labelMessage = document.createElement('label');
+// labelMessage.textContent = 'Message';
 
-const textareaMessage = document.createElement('textarea');
-textareaMessage.name = 'message';
+// const textareaMessage = document.createElement('textarea');
+// textareaMessage.name = 'message';
 
-const boutonEnvoyer = document.createElement('button');
-boutonEnvoyer.type = 'submit';
-boutonEnvoyer.textContent = 'Envoyer';
+// const boutonEnvoyer = document.createElement('button');
+// boutonEnvoyer.type = 'submit';
+// boutonEnvoyer.textContent = 'Envoyer';
 
-contactSection.appendChild(contactForm);
-contactSection.appendChild(divContact);
-divContact.appendChild(contactForm);
-contactForm.appendChild(labelPrenom);
-contactForm.appendChild(inputPrenom);
-contactForm.appendChild(labelNom);
-contactForm.appendChild(inputNom);
-contactForm.appendChild(labelEmail);
-contactForm.appendChild(inputEmail);
-contactForm.appendChild(labelMessage);
-contactForm.appendChild(textareaMessage);
-contactForm.appendChild(boutonEnvoyer);
+// contactSection.appendChild(contactForm);
+// contactSection.appendChild(divContact);
+// divContact.appendChild(contactForm);
+// contactForm.appendChild(labelPrenom);
+// contactForm.appendChild(inputPrenom);
+// contactForm.appendChild(labelNom);
+// contactForm.appendChild(inputNom);
+// contactForm.appendChild(labelEmail);
+// contactForm.appendChild(inputEmail);
+// contactForm.appendChild(labelMessage);
+// contactForm.appendChild(textareaMessage);
+// contactForm.appendChild(boutonEnvoyer);
 
 
 /// MODAL ///

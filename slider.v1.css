@@ -7,15 +7,15 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0; /* Par défaut, invisible */
-    visibility: hidden; /* Empêche l'interaction */
+    opacity: 0; 
+    visibility: hidden; 
     z-index: 2;
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Ajout de la transition */
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
 }
 
 .overlay.modal-open {
-    opacity: 1; /* Visible */
-    visibility: visible; /* Activé */
+    opacity: 1; 
+    visibility: visible;
 }
 
 .modal {
@@ -23,7 +23,7 @@
     background: linear-gradient(#CED6FB, #ECEFFE);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%); /* Position initiale légèrement en haut */
+    transform: translate(-50%, -60%); 
     width: 80%;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -32,13 +32,13 @@
     padding: 20px;
     z-index: 3;
     font-family: "roboto", sans-serif;
-    opacity: 0; /* Par défaut, invisible */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajout de la transition */
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .modal.modal-open {
-    opacity: 1; /* Visible */
-    transform: translate(-50%, -50%); /* Position correcte */
+    opacity: 1; 
+    transform: translate(-50%, -50%);
 }
 
 .modal h3 {
@@ -173,6 +173,7 @@
         font-size: 2.5em;
         color: rgb(38, 55, 112);
         margin-bottom: 20px;
+        margin-top: 0;
     }
 }
 

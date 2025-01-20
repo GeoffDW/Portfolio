@@ -424,7 +424,7 @@ header nav li {
 
             p {
                 width: 60%;
-                font-size: 1.7em;
+                font-size: 1.4em;
             }
 
             img {
@@ -490,15 +490,11 @@ header nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     padding: 16px;
     position: relative;
     opacity: 0;
     transform: translateX(-400px);
-
-    div {
-        display: flex;
-    }
 
     img {
         width: 40px;
@@ -521,7 +517,7 @@ header nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     padding: 16px;
     position: relative;
     opacity: 0;
@@ -541,7 +537,6 @@ header nav li {
 
 .skill-name {
     display: block;
-    flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
     font-family: 'roboto', sans-serif;
@@ -557,7 +552,7 @@ header nav li {
     }
 
     .sectionFront {
-        gap: 100px;
+        gap: 53px;
     }
 
     #skills h2 {
@@ -587,12 +582,12 @@ header nav li {
 
     .sectionFront,
     .sectionMore {
-        gap: 60px
+        gap: 80px
     }
 }
 
 
-/***** CONTACT ****/
+/* **** CONTACT ***
 
 
 #contact {
@@ -693,7 +688,7 @@ header nav li {
     #contact h2 {
         font-size: 2.8em;
     }
-}
+} */
 
 
 
