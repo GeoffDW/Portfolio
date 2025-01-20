@@ -82,6 +82,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
             start: "top 65%",
             end: "bottom 50%",
             scrub: true,
+            behavior: "smooth",
         },
     });
 });
