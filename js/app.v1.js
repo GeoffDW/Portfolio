@@ -92,13 +92,11 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
 
 
 const interval = setInterval(() => {
-    // Cibler les deux sections à la fois
     const skillsSections = [
         document.querySelector("#skills .sectionFront"),
         document.querySelector("#skills .sectionMore")
     ];
 
-    // Vérifier chaque section
     skillsSections.forEach((section) => {
         if (section) {
             gsap.to(section, {
