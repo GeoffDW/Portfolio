@@ -17,6 +17,7 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
         start: "top 70%",
         end: "bottom 70%",
         scrub: true,
+        once: true,
     };
     gsap.from(selection[0].chars, {
         color: "#e2f0fd",
@@ -34,6 +35,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
             start: "top 90%",
             end: "bottom 60%",
             scrub: true,
+            once: true,
         },
     });
 });
@@ -67,6 +69,7 @@ gsap.matchMedia().add("(min-width: 1024px)", () => {
             start: "top 95%",
             end: "bottom 70%",
             scrub: true,
+            once: true,
         },
     });
 });
@@ -83,7 +86,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
             end: "bottom 35%",
             scrub: true,
             behavior: "smooth",
-            markers: true,
+            once: true,
         },
     });
 });
