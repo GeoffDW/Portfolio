@@ -39,7 +39,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
 });
 
 
-/// PLUG IN SMOOTH SCROLL ///
+/// PLUG IN SCROLL ///
 
 
 const lenis = new Lenis();
@@ -124,7 +124,6 @@ const interval = setInterval(() => {
 /// GSAP H2 "SKILLS" ///
 
 
-
 const skillsTitle = document.querySelector("#skills h2");
 gsap.to(skillsTitle, {
     y: 0,
@@ -132,6 +131,7 @@ gsap.to(skillsTitle, {
         trigger: skillsTitle,
         start: "top 65%",
         end: "top 50%",
+        scrub: 1,
     },
 });
 
@@ -139,15 +139,41 @@ gsap.to(skillsTitle, {
 /// GSAP H3 "SKILLS" ///
 
 
+const skillsSecondTitle = document.querySelector("#skills .section-title");
 
-const skillsSecondTitle = document.querySelector("#skills h3");
-gsap.to(skillsSecondTitle, {
-    top: 0,
-    opacity: 1,
-    scrollTrigger: {
-        trigger: skillsSecondTitle,
-        start: "top 60%",
-        end: "top 30%",
-    },
-});
+// Vérifier si l'élément existe
+if (skillsSecondTitle) {
+    console.log("Titre trouvé : ", skillsSecondTitle);
+
+    gsap.to(skillsSecondTitle, {
+        opacity: 1, // Optionnel pour un effet de fondu
+        scrollTrigger: {
+            trigger: skillsSecondTitle,
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true,
+        },
+    });
+} else {
+    console.log("Titre non trouvé");
+}
+
+const skillsMoreTitle = document.querySelector("#skills .more-title");
+
+if (skillsMoreTitle) {
+    console.log("Titre trouvé : ", skillsMoreTitle);
+
+    gsap.to(skillsMoreTitle, {
+        opacity: 1, 
+        scrollTrigger: {
+            trigger: skillsMoreTitle,
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true,
+        },
+    });
+} else {
+    console.log("Titre non trouvé");
+}
+
 

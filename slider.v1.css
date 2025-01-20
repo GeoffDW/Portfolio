@@ -25,7 +25,6 @@
     left: 50%;
     transform: translate(-50%, -60%); /* Position initiale légèrement en haut */
     width: 80%;
-    height: 400px;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: none;
@@ -75,7 +74,7 @@
     font-family: "roboto", sans-serif;
     border: none;
     color: white;
-    width: 90px;
+    width: 74px;
     padding: 1em 1em;
     font-size: 13px;
     border-radius: 0.5em;
@@ -83,6 +82,7 @@
     display: block;
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
     text-decoration: none;
 }
 
@@ -144,6 +144,12 @@
     .modal-objectives {
         position: relative;
     }
+
+    .modal-link {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
 }
 
 
@@ -166,7 +172,6 @@
         font-weight: 400;
         font-size: 2.5em;
         color: rgb(38, 55, 112);
-        margin: -8px;
         margin-bottom: 20px;
     }
 }

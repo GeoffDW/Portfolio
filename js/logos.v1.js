@@ -3,6 +3,12 @@ const skills = await response.json();
 
 const parentElement = document.getElementById('skills');
 
+// Crée un titre h3 en dehors de la section
+const title = document.createElement('h3');
+title.textContent = "front-end";
+title.classList.add('section-title');
+parentElement.appendChild(title); // Ajouter le titre directement au parent
+
 const sectionFront = document.createElement('div');
 sectionFront.classList = "sectionFront";
 
@@ -24,8 +30,8 @@ selectedSkills.forEach(skill => {
     sectionFront.appendChild(skillContainer);
 });
 
+// Ajouter la section des compétences à l'élément parent
 parentElement.appendChild(sectionFront);
-
 
 
 /// SECTION MORE ///
@@ -35,11 +41,11 @@ const sectionContainer = document.createElement('div');
 
 const sectionTitle = document.createElement('h3');
 sectionTitle.textContent = "More";
+sectionTitle.classList.add('more-title');
 sectionContainer.appendChild(sectionTitle);
 
 const sectionMore = document.createElement('div');
 sectionMore.classList.add('sectionMore');
-
 
 const selectedSkillsTwo = skills.slice(5, 9);
 selectedSkillsTwo.forEach(skill => {

@@ -88,7 +88,6 @@ fetch("data/projets.json")
     })
     .then(data => {
         projets = data;
-        console.log("Projets chargés :", projets); // Vérifie que les données sont bien chargées
     })
     .catch(error => console.error("Erreur lors du chargement des projets :", error));
 
