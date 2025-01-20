@@ -76,11 +76,11 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
     gsap.to(aProposImg, {
         right: 0,
         opacity: 1,
-        duration: 1,
         scrollTrigger: {
             trigger: aProposImg,
             start: "top 65%",
             end: "bottom 50%",
+            scrub: true,
         },
     });
 });
