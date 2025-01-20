@@ -76,6 +76,7 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
     gsap.to(aProposImg, {
         right: 0,
         opacity: 1,
+        duration: 3,
         scrollTrigger: {
             trigger: aProposImg,
             start: "top 65%",
