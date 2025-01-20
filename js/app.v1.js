@@ -79,10 +79,11 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
         duration: 3,
         scrollTrigger: {
             trigger: aProposImg,
-            start: "top 65%",
-            end: "bottom 50%",
+            start: "top 75%",
+            end: "bottom 35%",
             scrub: true,
             behavior: "smooth",
+            markers: true,
         },
     });
 });
