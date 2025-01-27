@@ -41,19 +41,6 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
 });
 
 
-/// PLUG IN SCROLL ///
-
-
-const lenis = new Lenis();
-
-lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => {
-    lenis.raf(time * 3000);
-});
-
-gsap.ticker.lagSmoothing(0);
-
-
 /// GSAP IMAGE "A PROPOS DE MOI" ///
 
 
