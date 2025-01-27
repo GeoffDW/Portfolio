@@ -496,8 +496,8 @@ header nav li {
     gap: 25px;
     padding: 16px;
     position: relative;
-    opacity: 0;
-    transform: translateX(-400px);
+    /* opacity: 0; */
+    /* transform: translateX(-400px); */
 
     img {
         width: 40px;
@@ -523,8 +523,8 @@ header nav li {
     gap: 30px;
     padding: 16px;
     position: relative;
-    opacity: 0;
-    transform: translateX(400px);
+    /* opacity: 0; */
+    /* transform: translateX(400px); */
 }
 
 .sectionMore img {

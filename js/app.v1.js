@@ -84,31 +84,31 @@ gsap.matchMedia().add("(max-width: 768px)", () => {
 
 
 
-const interval = setInterval(() => {
-    const skillsSections = [
-        document.querySelector("#skills .sectionFront"),
-        document.querySelector("#skills .sectionMore")
-    ];
+// const interval = setInterval(() => {
+//     const skillsSections = [
+//         document.querySelector("#skills .sectionFront"),
+//         document.querySelector("#skills .sectionMore")
+//     ];
 
-    skillsSections.forEach((section) => {
-        if (section) {
-            gsap.to(section, {
-                x: 0,
-                opacity: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 75%",
-                    end: "top 30%",
-                },
-            });
-        }
-    });
+//     skillsSections.forEach((section) => {
+//         if (section) {
+//             gsap.to(section, {
+//                 x: 0,
+//                 opacity: 1,
+//                 scrollTrigger: {
+//                     trigger: section,
+//                     start: "top 75%",
+//                     end: "top 30%",
+//                 },
+//             });
+//         }
+//     });
 
-    // Si les deux sections ont été trouvées, arrêter l'intervalle
-    if (skillsSections.every(section => section !== null)) {
-        clearInterval(interval);
-    }
-}, 100);
+//     // Si les deux sections ont été trouvées, arrêter l'intervalle
+//     if (skillsSections.every(section => section !== null)) {
+//         clearInterval(interval);
+//     }
+// }, 100);
 
 
 /// GSAP H2 "SKILLS" ///
